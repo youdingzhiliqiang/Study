@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LQMainTCL.h"
+#import "LQBaseNCL.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"测试git和github");
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self main];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -41,6 +45,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - 调用main函数
+
+- (void)main
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQMainTCL" bundle:nil];
+    LQMainTCL *mainTCL = [storyboard instantiateViewControllerWithIdentifier:@"LQMainTCL"];
+    LQBaseNCL *mainNCL = [[LQBaseNCL alloc] initWithRootViewController:mainTCL];
+    self.window.rootViewController = mainNCL;
 }
 
 @end

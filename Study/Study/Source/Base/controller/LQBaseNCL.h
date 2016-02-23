@@ -1,15 +1,12 @@
 //
-//  ViewController.h
+//  LQBaseNCL.h
 //  Study
 //
-//  Created by 李强 on 16/2/19.
+//  Created by 李强 on 16/2/22.
 //  Copyright © 2016年 李强. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface LQBaseNCL : UINavigationController
 @end
-
