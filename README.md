@@ -1,3 +1,3 @@
 # Study
 This is a project just for study.
-Let go tother!
+Let go together!
