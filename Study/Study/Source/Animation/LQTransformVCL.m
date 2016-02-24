@@ -84,7 +84,7 @@
     [UIView transitionWithView:self.imageView duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
         
         if ([self.imageView.image isEqual:[UIImage imageNamed:@"篮球"]]) {
-            self.imageView.image = [UIImage imageNamed:@"动物"];
+            self.imageView.image = [UIImage imageNamed:@"跑步"];
         } else {
             self.imageView.image = [UIImage imageNamed:@"篮球"];
         }
