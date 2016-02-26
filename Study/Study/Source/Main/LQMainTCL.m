@@ -10,6 +10,7 @@
 #import "LQTitleCell.h"
 #import "LQAnimationTCL.h"
 #import "LQCodingVCL.h"
+#import "LQCoredataVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -71,6 +72,10 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQCodingVCL" bundle:nil];
         LQCodingVCL *codingVCL = [storyboard instantiateViewControllerWithIdentifier:@"LQCodingVCL"];
         [self.navigationController pushViewController:codingVCL animated:YES];
+    } else if (indexPath.row == 2) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQCoredataVCL" bundle:nil];
+        LQCoredataVCL *coredataVCL = [storyboard instantiateViewControllerWithIdentifier:@"LQCoredataVCL"];
+        [self.navigationController pushViewController:coredataVCL animated:YES];
     }
 }
 

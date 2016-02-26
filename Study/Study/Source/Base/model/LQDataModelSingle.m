@@ -25,8 +25,8 @@ static NSString *archiveFileName = @"DataModel.dat";
     static LQDataModelSingle *sharedInstance = nil;
     @synchronized(self) {
         if (sharedInstance == nil) {
-            NSString *documentPath = [FileManage getDocumentsDirectory];
-            NSString *archivePath = [documentPath stringByAppendingString:archiveFileName];
+            NSString *documentPath = [FileManage getCodingDirectory];
+            NSString *archivePath = [documentPath stringByAppendingFormat:@"/%@",archiveFileName];
             sharedInstance = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
         }
         if (sharedInstance == nil) {
@@ -38,8 +38,8 @@ static NSString *archiveFileName = @"DataModel.dat";
 
 - (void)archive
 {
-    NSString *documentPath = [FileManage getDocumentsDirectory];
-    NSString *archivePath = [documentPath stringByAppendingString:archiveFileName];
+    NSString *documentPath = [FileManage getCodingDirectory];
+    NSString *archivePath = [documentPath stringByAppendingFormat:@"/%@",archiveFileName];
     [NSKeyedArchiver archiveRootObject:self toFile:archivePath];
 }
 

@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    NSLog(@"===%@",NSHomeDirectory());
     [self main];
     [self.window makeKeyAndVisible];
     return YES;
@@ -56,5 +57,6 @@
     LQBaseNCL *mainNCL = [[LQBaseNCL alloc] initWithRootViewController:mainTCL];
     self.window.rootViewController = mainNCL;
 }
+
 
 @end

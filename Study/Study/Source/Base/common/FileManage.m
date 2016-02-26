@@ -8,6 +8,9 @@
 
 #import "FileManage.h"
 
+static NSString *documentNextComponent = @"data";
+static NSString *projectName = @"Study";
+
 @implementation FileManage
 
 + (NSString *)getHomeDirectory
@@ -42,6 +45,19 @@
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     NSArray *districtArray = [JsonChange fromJsonDataToArrayOrDictionary:data];
     return districtArray;
+}
+
++ (NSString *)getCodingDirectory
+{
+    NSString *documentPath = [self getDocumentsDirectory];
+    NSString *dataPath = [documentPath stringByAppendingPathComponent:documentNextComponent];
+    NSString *projectNmaePath = [dataPath stringByAppendingPathComponent:projectName];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isExist = YES;
+    if (![fileManager fileExistsAtPath:projectNmaePath isDirectory:&isExist]) {
+        [fileManager createDirectoryAtPath:projectNmaePath withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
+    return projectNmaePath;
 }
 
 @end

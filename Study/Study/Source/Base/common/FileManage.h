@@ -26,4 +26,6 @@
 + (NSString *)getTmpDirectory;
 //获取省市区文件
 + (NSArray *)obtainDistrict;
+//获取coding目录
++ (NSString *)getCodingDirectory;
 @end
