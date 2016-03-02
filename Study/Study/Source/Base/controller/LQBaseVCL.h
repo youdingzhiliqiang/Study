@@ -11,6 +11,8 @@
 #import "common.h"
 #import "LQDataModelSingle.h"
 #import "MBProgressHUD.h"
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 @interface LQBaseVCL : UIViewController <MBProgressHUDDelegate>
 //用于统一的页面传值
 @property (nonatomic,strong) NSDictionary *params;

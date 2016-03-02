@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LQMainTCL.h"
 #import "LQBaseNCL.h"
+#import "NSString+Addition.h"
 @interface AppDelegate ()
 
 @end

@@ -91,6 +91,12 @@
     [hud hide:YES afterDelay:2];
 }
 
+#pragma mark - MBProgressHUDDelegate
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    [hud removeFromSuperview];
+}
+
 /*
 #pragma mark - Navigation
 

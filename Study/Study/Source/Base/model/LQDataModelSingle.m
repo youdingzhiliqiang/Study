@@ -26,7 +26,7 @@ static NSString *archiveFileName = @"DataModel.dat";
     @synchronized(self) {
         if (sharedInstance == nil) {
             NSString *documentPath = [FileManage getCodingDirectory];
-            NSString *archivePath = [documentPath stringByAppendingFormat:@"/%@",archiveFileName];
+            NSString *archivePath = [documentPath stringByAppendingPathComponent:archiveFileName];
             sharedInstance = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
         }
         if (sharedInstance == nil) {
@@ -39,7 +39,7 @@ static NSString *archiveFileName = @"DataModel.dat";
 - (void)archive
 {
     NSString *documentPath = [FileManage getCodingDirectory];
-    NSString *archivePath = [documentPath stringByAppendingFormat:@"/%@",archiveFileName];
+    NSString *archivePath = [documentPath stringByAppendingPathComponent:archiveFileName];
     [NSKeyedArchiver archiveRootObject:self toFile:archivePath];
 }
 
