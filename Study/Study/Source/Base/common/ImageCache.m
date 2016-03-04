@@ -106,7 +106,7 @@ static NSString *fileName = @"ImageCache";
         DirSize = [NSString stringWithFormat:@"%.2fM",imageCacheSize];
     } else {
         if (imageCacheSize == 0) {
-            DirSize = @"0M";
+            DirSize = @"0";
         } else {
             DirSize = [NSString stringWithFormat:@"%.2fK",imageCacheSize];
         }

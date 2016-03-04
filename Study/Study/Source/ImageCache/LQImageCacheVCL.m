@@ -7,7 +7,7 @@
 //
 
 #import "LQImageCacheVCL.h"
-
+#import "LQClearCacheVCL.h"
 @interface LQImageCacheVCL ()
 
 @end
@@ -19,7 +19,6 @@
     // Do any additional setup after loading the view.
     [self addBackButton];
     [self.imageView setImageWithURL:[NSURL URLWithString:@"http://static.udz.com/statics/app/images/bannerlvbb2.jpg"] placeholderImage:[UIImage imageNamed:@"banner"]];
-    [self obtainImageCache];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,41 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 获取图片缓存大小
-
-- (void)obtainImageCache
-{
-    self.imageCacheLabel.text = [ImageCache getSizeOfImageCache];
-}
-
-#pragma mark - 删除图片缓存
+#pragma mark - push获取缓存页面
 
 - (IBAction)deleteImageCache:(id)sender {
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"清除缓存" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSString *imageCacheSize = [ImageCache getSizeOfImageCache];
-//            MBProgressHUD *hud;
-//            if ([imageCacheSize length] > 0) {
-//               hud = [self configChrysanthemum];
-//            }
-            [ImageCache deleteImageCache];
-            dispatch_async(dispatch_get_main_queue(), ^{
-               self.imageCacheLabel.text = [ImageCache getSizeOfImageCache];
-//                if (hud != nil) {
-//                    [self hudWasHidden:hud];
-//                }
-            });
-        });
-    }];
-    
-    UIAlertAction *alertAction2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    [alertController addAction:alertAction];
-    [alertController addAction:alertAction2];
-    [self presentViewController:alertController animated:YES completion:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQImageCacheVCL" bundle:nil];
+    LQClearCacheVCL *cacheClear = [storyboard instantiateViewControllerWithIdentifier:@"LQClearCacheVCL"];
+    [self.navigationController pushViewController:cacheClear animated:YES];
 }
 
 

@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = COLOR_BACKGROUND;
+    [self addLeftSideReturn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,6 +96,14 @@
 - (void)hudWasHidden:(MBProgressHUD *)hud
 {
     [hud removeFromSuperview];
+}
+#pragma mark -  添加左滑返回功能
+- (void)addLeftSideReturn
+{
+    if (self.navigationController.view != nil) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
 }
 
 /*

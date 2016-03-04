@@ -28,4 +28,9 @@
 - (void)showMBProgressForNetworkAnomalies;
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 
+#pragma mark -  添加左滑返回功能
+
+- (void)addLeftSideReturn;
+
+
 @end

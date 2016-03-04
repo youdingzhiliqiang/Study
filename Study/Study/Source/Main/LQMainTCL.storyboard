@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ao8-Nl-154" kind="relationship" relationship="rootViewController" id="erY-hc-0PS"/>
+                        <segue destination="ao8-Nl-154" kind="relationship" relationship="rootViewController" id="UqS-p6-Lb1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCa-wJ-ukR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,6 +61,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0L-pt-iQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="345" y="439"/>
+        </scene>
+        <!--Multi ThreadTCL-->
+        <scene sceneID="mqk-0T-eMb">
+            <objects>
+                <tableViewController storyboardIdentifier="LQMultiThreadTCL" id="dXB-uk-uYh" customClass="LQMultiThreadTCL" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="j1c-4e-CPa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LQTitleCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="LQTitleCell" id="dve-vb-H9M" customClass="LQTitleCell">
+                                <rect key="frame" x="0.0" y="50" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dve-vb-H9M" id="MMJ-5L-XaK">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zKU-D1-fzT">
+                                            <rect key="frame" x="12" y="11" width="296" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="zKU-D1-fzT" id="QZf-Za-7ia"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dXB-uk-uYh" id="gPB-43-aLQ"/>
+                            <outlet property="delegate" destination="dXB-uk-uYh" id="LPm-f9-7vD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="oBO-Db-GtS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTw-kA-pgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="439"/>
         </scene>
     </scenes>
 </document>

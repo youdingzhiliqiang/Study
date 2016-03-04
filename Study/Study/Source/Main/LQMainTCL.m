@@ -12,6 +12,7 @@
 #import "LQCodingVCL.h"
 #import "LQCoredataVCL.h"
 #import "LQImageCacheVCL.h"
+#import "LQMultiThreadTCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -35,7 +36,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -81,6 +82,10 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQImageCacheVCL" bundle:nil];
         LQImageCacheVCL *imageCache = [storyboard instantiateViewControllerWithIdentifier:@"LQImageCacheVCL"];
         [self.navigationController pushViewController:imageCache animated:YES];
+    } else if (indexPath.row == 4) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQMainTCL" bundle:nil];
+        LQMultiThreadTCL *multiThread = [storyboard instantiateViewControllerWithIdentifier:@"LQMultiThreadTCL"];
+        [self.navigationController pushViewController:multiThread animated:YES];
     }
 }
 

@@ -29,18 +29,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mZU-BV-Zok">
-                                <rect key="frame" x="0.0" y="290" width="320" height="46"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fnF-LU-9Dn">
                                 <rect key="frame" x="78" y="380" width="163" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.74246839580000001" green="0.92679708449999998" blue="0.63610075880000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="清除缓存"/>
+                                <state key="normal" title="获取缓存"/>
                                 <connections>
                                     <action selector="deleteImageCache:" destination="w9G-Yx-eCH" eventType="touchUpInside" id="Si5-ij-ZSq"/>
                                 </connections>
@@ -55,13 +48,54 @@
                     </view>
                     <navigationItem key="navigationItem" id="Utj-Xg-k6U"/>
                     <connections>
-                        <outlet property="imageCacheLabel" destination="mZU-BV-Zok" id="ZBm-as-WJ8"/>
                         <outlet property="imageView" destination="cWs-g5-hA5" id="fDT-bL-6mr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ste-q1-wfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62" y="235"/>
+            <point key="canvasLocation" x="-96" y="235"/>
+        </scene>
+        <!--Clear CacheVCL-->
+        <scene sceneID="tTO-Un-O5N">
+            <objects>
+                <viewController storyboardIdentifier="LQClearCacheVCL" id="iZI-Hz-cfw" customClass="LQClearCacheVCL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TzR-kU-MC6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="keo-aM-qGl">
+                                <rect key="frame" x="185.99999976333447" y="105" width="119" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3ld-iT-7vH">
+                                <rect key="frame" x="79" y="378" width="163" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74246839580000001" green="0.92679708449999998" blue="0.63610075880000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="清除缓存"/>
+                                <connections>
+                                    <action selector="clearCacheButtonClick:" destination="iZI-Hz-cfw" eventType="touchUpInside" id="xc2-az-kWh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的缓存" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vVS-wc-yDS">
+                                <rect key="frame" x="15" y="105" width="137" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cacheLabel" destination="keo-aM-qGl" id="6aX-Of-uaz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqf-Kk-fsl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="235"/>
         </scene>
     </scenes>
 </document>

@@ -24,6 +24,10 @@
 		D55C12A01C85301300A129CD /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C128D1C85301300A129CD /* UIProgressView+AFNetworking.m */; };
 		D55C12A11C85301300A129CD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C128F1C85301300A129CD /* UIRefreshControl+AFNetworking.m */; };
 		D55C12A21C85301300A129CD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C12911C85301300A129CD /* UIWebView+AFNetworking.m */; };
+		D563DA221C88172A00A1E205 /* LQClearCacheVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D563DA211C88172A00A1E205 /* LQClearCacheVCL.m */; };
+		D563DA2D1C8827E900A1E205 /* LQMultiThreadTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D563DA2C1C8827E900A1E205 /* LQMultiThreadTCL.m */; };
+		D563DA301C882B8200A1E205 /* LQGcdVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D563DA2F1C882B8200A1E205 /* LQGcdVCL.m */; };
+		D563DA321C882B9100A1E205 /* LQGcdVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D563DA311C882B9100A1E205 /* LQGcdVCL.storyboard */; };
 		D56F8A671C842E39006E4701 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8A661C842E39006E4701 /* ImageCache.m */; };
 		D56F8AA11C8433DC006E4701 /* LQImageCacheVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */; };
 		D56F8AA31C8433ED006E4701 /* LQImageCacheVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */; };
@@ -96,6 +100,13 @@
 		D55C128F1C85301300A129CD /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		D55C12901C85301300A129CD /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		D55C12911C85301300A129CD /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		D563DA201C88172A00A1E205 /* LQClearCacheVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQClearCacheVCL.h; sourceTree = "<group>"; };
+		D563DA211C88172A00A1E205 /* LQClearCacheVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQClearCacheVCL.m; sourceTree = "<group>"; };
+		D563DA2B1C8827E900A1E205 /* LQMultiThreadTCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQMultiThreadTCL.h; sourceTree = "<group>"; };
+		D563DA2C1C8827E900A1E205 /* LQMultiThreadTCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQMultiThreadTCL.m; sourceTree = "<group>"; };
+		D563DA2E1C882B8200A1E205 /* LQGcdVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQGcdVCL.h; sourceTree = "<group>"; };
+		D563DA2F1C882B8200A1E205 /* LQGcdVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQGcdVCL.m; sourceTree = "<group>"; };
+		D563DA311C882B9100A1E205 /* LQGcdVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQGcdVCL.storyboard; sourceTree = "<group>"; };
 		D56F8A651C842E39006E4701 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		D56F8A661C842E39006E4701 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 		D56F8A9F1C8433DC006E4701 /* LQImageCacheVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQImageCacheVCL.h; sourceTree = "<group>"; };
@@ -217,12 +228,32 @@
 			path = "UIKit+AFNetworking-2.5.4";
 			sourceTree = "<group>";
 		};
+		D563DA231C881DEA00A1E205 /* MultiThread */ = {
+			isa = PBXGroup;
+			children = (
+				D563DA241C881E0500A1E205 /* GCD */,
+			);
+			path = MultiThread;
+			sourceTree = "<group>";
+		};
+		D563DA241C881E0500A1E205 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				D563DA2E1C882B8200A1E205 /* LQGcdVCL.h */,
+				D563DA2F1C882B8200A1E205 /* LQGcdVCL.m */,
+				D563DA311C882B9100A1E205 /* LQGcdVCL.storyboard */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		D56F8A9B1C8433AC006E4701 /* ImageCache */ = {
 			isa = PBXGroup;
 			children = (
 				D56F8A9F1C8433DC006E4701 /* LQImageCacheVCL.h */,
 				D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */,
 				D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */,
+				D563DA201C88172A00A1E205 /* LQClearCacheVCL.h */,
+				D563DA211C88172A00A1E205 /* LQClearCacheVCL.m */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -329,6 +360,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D563DA231C881DEA00A1E205 /* MultiThread */,
 				D56F8A9B1C8433AC006E4701 /* ImageCache */,
 				D58B9F1C1C802D3A006C1A8B /* DataStore */,
 				D5FBD3E11C7DA3E100082772 /* Animation */,
@@ -419,6 +451,8 @@
 				D5FBD4691C7DA3E100082772 /* LQMainTCL.h */,
 				D5FBD46A1C7DA3E100082772 /* LQMainTCL.m */,
 				D5FBD46B1C7DA3E100082772 /* LQMainTCL.storyboard */,
+				D563DA2B1C8827E900A1E205 /* LQMultiThreadTCL.h */,
+				D563DA2C1C8827E900A1E205 /* LQMultiThreadTCL.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -504,6 +538,7 @@
 				D56F8AA31C8433ED006E4701 /* LQImageCacheVCL.storyboard in Resources */,
 				D5FBD4721C7DA3E100082772 /* LQAnimationTCL.storyboard in Resources */,
 				D5FBD3D71C7DA30D00082772 /* LaunchScreen.storyboard in Resources */,
+				D563DA321C882B9100A1E205 /* LQGcdVCL.storyboard in Resources */,
 				D58B9F311C802D3A006C1A8B /* LQCodingVCL.storyboard in Resources */,
 				D5FBD4741C7DA3E100082772 /* LQTransformVCL.storyboard in Resources */,
 				D5FBD3D41C7DA30D00082772 /* Assets.xcassets in Resources */,
@@ -520,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55C12971C85301300A129CD /* AFURLConnectionOperation.m in Sources */,
+				D563DA301C882B8200A1E205 /* LQGcdVCL.m in Sources */,
 				D5FBD3CC1C7DA30D00082772 /* AppDelegate.m in Sources */,
 				D5FBD4751C7DA3E100082772 /* LQTitleCell.m in Sources */,
 				D55C129C1C85301300A129CD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -533,6 +569,7 @@
 				D5FBD4781C7DA3E100082772 /* LQBaseNCL.m in Sources */,
 				D5FBD47C1C7DA3E100082772 /* LQStaticData.m in Sources */,
 				D5FBD4731C7DA3E100082772 /* LQTransformVCL.m in Sources */,
+				D563DA221C88172A00A1E205 /* LQClearCacheVCL.m in Sources */,
 				D5FBD47A1C7DA3E100082772 /* LQBaseVCL.m in Sources */,
 				D55C12961C85301300A129CD /* AFSecurityPolicy.m in Sources */,
 				D55C129A1C85301300A129CD /* AFURLSessionManager.m in Sources */,
@@ -558,6 +595,7 @@
 				D5FBD4711C7DA3E100082772 /* LQAnimationTCL.m in Sources */,
 				D58B9F2B1C802D3A006C1A8B /* CoredataStudy.xcdatamodeld in Sources */,
 				D58B9F2E1C802D3A006C1A8B /* Person+CoreDataProperties.m in Sources */,
+				D563DA2D1C8827E900A1E205 /* LQMultiThreadTCL.m in Sources */,
 				D5FBD4821C7DA3E100082772 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

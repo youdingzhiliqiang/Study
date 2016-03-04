@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yph-KG-POc">
+            <objects>
+                <navigationController id="BJW-U8-GKa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uJ0-7V-Gux">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pzM-x2-MfL" kind="relationship" relationship="rootViewController" id="E0p-Zp-7h2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhy-8o-fdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582" y="267"/>
+        </scene>
+        <!--GcdVCL-->
+        <scene sceneID="bLY-tp-nt3">
+            <objects>
+                <viewController storyboardIdentifier="LQGcdVCL" id="pzM-x2-MfL" customClass="LQGcdVCL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3g-Uf-30F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ae-44-xKE">
+                                <rect key="frame" x="0.0" y="66" width="80" height="39"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74246839580000001" green="0.92679708449999998" blue="0.63610075880000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Main"/>
+                                <connections>
+                                    <action selector="mainButtonClick:" destination="pzM-x2-MfL" eventType="touchUpInside" id="EeT-5R-BtO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zB5-Bj-UbQ">
+                                <rect key="frame" x="96" y="157" width="129" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92679708449999998" green="0.79990432899999997" blue="0.1054011299" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ulw-pZ-0Uv">
+                                <rect key="frame" x="95" y="221" width="129" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92679708449999998" green="0.79990432899999997" blue="0.1054011299" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="END-bL-ER0">
+                                <rect key="frame" x="96" y="291" width="129" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92679708449999998" green="0.79990432899999997" blue="0.1054011299" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3XT-Vw-vCS">
+                                <rect key="frame" x="80" y="66" width="80" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74246839580000001" green="0.92679708449999998" blue="0.63610075880000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Globel"/>
+                                <connections>
+                                    <action selector="globelButtonClick:" destination="pzM-x2-MfL" eventType="touchUpInside" id="j3t-jb-ccy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F5u-R5-LWE">
+                                <rect key="frame" x="160" y="66" width="80" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74246839580000001" green="0.92679708449999998" blue="0.63610075880000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonClick:" destination="pzM-x2-MfL" eventType="touchUpInside" id="bTD-La-Jbd"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="UwQ-9F-9yK">
+                                <rect key="frame" x="-1" y="175" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Lg-To-cal">
+                                <rect key="frame" x="240" y="66" width="80" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74246839580000001" green="0.92679708449999998" blue="0.63610075880000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Image"/>
+                                <connections>
+                                    <action selector="imageButtonClick:" destination="pzM-x2-MfL" eventType="touchUpInside" id="ktn-bw-I3M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9xl-h7-TDt"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="zB5-Bj-UbQ" id="SEb-OV-RQt"/>
+                        <outlet property="imageView" destination="UwQ-9F-9yK" id="hyc-aW-YH3"/>
+                        <outlet property="secondLabel" destination="ulw-pZ-0Uv" id="Sml-He-Ry2"/>
+                        <outlet property="thirdLabel" destination="END-bL-ER0" id="Gbd-oe-VHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfV-GG-CDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="267"/>
+        </scene>
+    </scenes>
+</document>

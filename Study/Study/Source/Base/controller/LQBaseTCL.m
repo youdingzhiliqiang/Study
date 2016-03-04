@@ -24,6 +24,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.dataArray = [[NSMutableArray alloc] init];
     self.tableView.backgroundColor = COLOR_BACKGROUND;
+    [self addLeftSideReturn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -114,6 +115,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     return 0;
+}
+
+#pragma mark -  添加左滑返回功能
+- (void)addLeftSideReturn
+{
+    if (self.navigationController.view != nil) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
 }
 
 /*
