@@ -32,6 +32,9 @@
 		D56F8AA11C8433DC006E4701 /* LQImageCacheVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */; };
 		D56F8AA31C8433ED006E4701 /* LQImageCacheVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */; };
 		D575F2F01C7EA0110067527E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D575F2EF1C7EA0110067527E /* CoreData.framework */; };
+		D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D578CA0E1C897D4100ADAAC2 /* LQBlockVCL.m */; };
+		D578CA111C898FF300ADAAC2 /* LQBlockVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D578CA101C898FF300ADAAC2 /* LQBlockVCL.storyboard */; };
+		D578CA141C89905800ADAAC2 /* LQNextBlockVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D578CA131C89905800ADAAC2 /* LQNextBlockVCL.m */; };
 		D58B9F1B1C7FF875006C1A8B /* LQTitleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F1A1C7FF875006C1A8B /* LQTitleDetailCell.m */; };
 		D58B9F2B1C802D3A006C1A8B /* CoredataStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F1E1C802D3A006C1A8B /* CoredataStudy.xcdatamodeld */; };
 		D58B9F2C1C802D3A006C1A8B /* LQCoredataVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F211C802D3A006C1A8B /* LQCoredataVCL.m */; };
@@ -113,6 +116,11 @@
 		D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQImageCacheVCL.m; sourceTree = "<group>"; };
 		D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQImageCacheVCL.storyboard; sourceTree = "<group>"; };
 		D575F2EF1C7EA0110067527E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D578CA0D1C897D4100ADAAC2 /* LQBlockVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBlockVCL.h; sourceTree = "<group>"; };
+		D578CA0E1C897D4100ADAAC2 /* LQBlockVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBlockVCL.m; sourceTree = "<group>"; };
+		D578CA101C898FF300ADAAC2 /* LQBlockVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQBlockVCL.storyboard; sourceTree = "<group>"; };
+		D578CA121C89905800ADAAC2 /* LQNextBlockVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQNextBlockVCL.h; sourceTree = "<group>"; };
+		D578CA131C89905800ADAAC2 /* LQNextBlockVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQNextBlockVCL.m; sourceTree = "<group>"; };
 		D58B9F191C7FF875006C1A8B /* LQTitleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQTitleDetailCell.h; sourceTree = "<group>"; };
 		D58B9F1A1C7FF875006C1A8B /* LQTitleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQTitleDetailCell.m; sourceTree = "<group>"; };
 		D58B9F1F1C802D3A006C1A8B /* CoredataStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataStudy.xcdatamodel; sourceTree = "<group>"; };
@@ -266,6 +274,18 @@
 			name = frameworks;
 			sourceTree = "<group>";
 		};
+		D578CA0C1C897A6800ADAAC2 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				D578CA0D1C897D4100ADAAC2 /* LQBlockVCL.h */,
+				D578CA0E1C897D4100ADAAC2 /* LQBlockVCL.m */,
+				D578CA101C898FF300ADAAC2 /* LQBlockVCL.storyboard */,
+				D578CA121C89905800ADAAC2 /* LQNextBlockVCL.h */,
+				D578CA131C89905800ADAAC2 /* LQNextBlockVCL.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 		D58B9F1C1C802D3A006C1A8B /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +380,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D578CA0C1C897A6800ADAAC2 /* Block */,
 				D563DA231C881DEA00A1E205 /* MultiThread */,
 				D56F8A9B1C8433AC006E4701 /* ImageCache */,
 				D58B9F1C1C802D3A006C1A8B /* DataStore */,
@@ -542,6 +563,7 @@
 				D58B9F311C802D3A006C1A8B /* LQCodingVCL.storyboard in Resources */,
 				D5FBD4741C7DA3E100082772 /* LQTransformVCL.storyboard in Resources */,
 				D5FBD3D41C7DA30D00082772 /* Assets.xcassets in Resources */,
+				D578CA111C898FF300ADAAC2 /* LQBlockVCL.storyboard in Resources */,
 				D58B9F2D1C802D3A006C1A8B /* LQCoredataVCL.storyboard in Resources */,
 				D5FBD4701C7DA3E100082772 /* address.json in Resources */,
 			);
@@ -562,6 +584,7 @@
 				D55C12921C85301300A129CD /* AFHTTPRequestOperation.m in Sources */,
 				D55C12991C85301300A129CD /* AFURLResponseSerialization.m in Sources */,
 				D58B9F301C802D3A006C1A8B /* LQCodingVCL.m in Sources */,
+				D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */,
 				D55C129F1C85301300A129CD /* UIImageView+AFNetworking.m in Sources */,
 				D55C12A21C85301300A129CD /* UIWebView+AFNetworking.m in Sources */,
 				D58B9F2F1C802D3A006C1A8B /* Person.m in Sources */,
@@ -593,6 +616,7 @@
 				D5FBD4761C7DA3E100082772 /* FileManage.m in Sources */,
 				D5FBD47B1C7DA3E100082772 /* LQDataModelSingle.m in Sources */,
 				D5FBD4711C7DA3E100082772 /* LQAnimationTCL.m in Sources */,
+				D578CA141C89905800ADAAC2 /* LQNextBlockVCL.m in Sources */,
 				D58B9F2B1C802D3A006C1A8B /* CoredataStudy.xcdatamodeld in Sources */,
 				D58B9F2E1C802D3A006C1A8B /* Person+CoreDataProperties.m in Sources */,
 				D563DA2D1C8827E900A1E205 /* LQMultiThreadTCL.m in Sources */,
