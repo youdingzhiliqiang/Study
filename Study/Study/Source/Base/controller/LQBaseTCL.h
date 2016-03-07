@@ -12,6 +12,7 @@
 #import "LQDataModelSingle.h"
 #import "MBProgressHUD.h"
 #import "UIImageView+AFNetworking.h"
+#import "MJRefresh.h"
 @interface LQBaseTCL : UITableViewController<MBProgressHUDDelegate>
 //用于统一的页面传值
 @property (nonatomic,strong) NSDictionary *params;
