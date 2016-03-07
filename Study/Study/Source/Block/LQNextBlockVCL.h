@@ -7,9 +7,9 @@
 //
 
 #import "LQBaseVCL.h"
-
+typedef void (^sendStr)(NSString *str);
 @interface LQNextBlockVCL : LQBaseVCL
-@property (nonatomic,copy) void(^sendStr)(NSString *str);
+@property (nonatomic,copy) sendStr sendStr;
 @property (weak, nonatomic) IBOutlet UITextField *textFiled;
 
 @end

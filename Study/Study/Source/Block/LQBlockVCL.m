@@ -45,7 +45,7 @@
         blockTest = 10;
         return blockTest * num;
     };
-    NSLog(@"===%d",myBlock(3));
+    myBlock(3);
 }
 
 #pragma mark - 下一步按钮的点击事件

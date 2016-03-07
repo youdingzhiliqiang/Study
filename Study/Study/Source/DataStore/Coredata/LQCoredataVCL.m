@@ -80,7 +80,7 @@
    
     
     Person *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.context];
-    person.name = [NSString stringWithFormat:@"name%d",array.count+1];
+    person.name = [NSString stringWithFormat:@"name%d",(int)array.count+1];
     person.age = @(array.count+1);
     BOOL success = [self.context save:&error];
     if (!success) {
