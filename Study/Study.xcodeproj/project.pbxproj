@@ -56,6 +56,8 @@
 		D56F8A671C842E39006E4701 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8A661C842E39006E4701 /* ImageCache.m */; };
 		D56F8AA11C8433DC006E4701 /* LQImageCacheVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */; };
 		D56F8AA31C8433ED006E4701 /* LQImageCacheVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */; };
+		D572C0EB1C8EA29F00A5B917 /* MJDIYAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D572C0E81C8EA29F00A5B917 /* MJDIYAutoFooter.m */; };
+		D572C0EC1C8EA29F00A5B917 /* MJDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D572C0EA1C8EA29F00A5B917 /* MJDIYHeader.m */; };
 		D575F2F01C7EA0110067527E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D575F2EF1C7EA0110067527E /* CoreData.framework */; };
 		D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D578CA0E1C897D4100ADAAC2 /* LQBlockVCL.m */; };
 		D578CA111C898FF300ADAAC2 /* LQBlockVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D578CA101C898FF300ADAAC2 /* LQBlockVCL.storyboard */; };
@@ -189,6 +191,10 @@
 		D56F8A9F1C8433DC006E4701 /* LQImageCacheVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQImageCacheVCL.h; sourceTree = "<group>"; };
 		D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQImageCacheVCL.m; sourceTree = "<group>"; };
 		D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQImageCacheVCL.storyboard; sourceTree = "<group>"; };
+		D572C0E71C8EA29F00A5B917 /* MJDIYAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDIYAutoFooter.h; sourceTree = "<group>"; };
+		D572C0E81C8EA29F00A5B917 /* MJDIYAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDIYAutoFooter.m; sourceTree = "<group>"; };
+		D572C0E91C8EA29F00A5B917 /* MJDIYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDIYHeader.h; sourceTree = "<group>"; };
+		D572C0EA1C8EA29F00A5B917 /* MJDIYHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDIYHeader.m; sourceTree = "<group>"; };
 		D575F2EF1C7EA0110067527E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D578CA0D1C897D4100ADAAC2 /* LQBlockVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBlockVCL.h; sourceTree = "<group>"; };
 		D578CA0E1C897D4100ADAAC2 /* LQBlockVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBlockVCL.m; sourceTree = "<group>"; };
@@ -451,6 +457,17 @@
 			path = ImageCache;
 			sourceTree = "<group>";
 		};
+		D572C0E61C8EA29F00A5B917 /* MJDIY */ = {
+			isa = PBXGroup;
+			children = (
+				D572C0E71C8EA29F00A5B917 /* MJDIYAutoFooter.h */,
+				D572C0E81C8EA29F00A5B917 /* MJDIYAutoFooter.m */,
+				D572C0E91C8EA29F00A5B917 /* MJDIYHeader.h */,
+				D572C0EA1C8EA29F00A5B917 /* MJDIYHeader.m */,
+			);
+			path = MJDIY;
+			sourceTree = "<group>";
+		};
 		D575F2EE1C7E9FF80067527E /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +611,7 @@
 		D5FBD44B1C7DA3E100082772 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D572C0E61C8EA29F00A5B917 /* MJDIY */,
 				D5F56C061C8584AA00C9B5AA /* addtion */,
 				D5FBD44C1C7DA3E100082772 /* cell */,
 				D5FBD44F1C7DA3E100082772 /* common */,
@@ -816,6 +834,7 @@
 				D51D1FF31C8D91F600E244F7 /* MJRefreshComponent.m in Sources */,
 				D58B9F2C1C802D3A006C1A8B /* LQCoredataVCL.m in Sources */,
 				D51D1FFD1C8D91F600E244F7 /* MJRefreshNormalHeader.m in Sources */,
+				D572C0EB1C8EA29F00A5B917 /* MJDIYAutoFooter.m in Sources */,
 				D56F8A671C842E39006E4701 /* ImageCache.m in Sources */,
 				D51D1FFA1C8D91F600E244F7 /* MJRefreshBackNormalFooter.m in Sources */,
 				D5F56C0C1C8587D300C9B5AA /* NSString+Addition.m in Sources */,
@@ -824,6 +843,7 @@
 				D55C12A11C85301300A129CD /* UIRefreshControl+AFNetworking.m in Sources */,
 				D51D1FF81C8D91F600E244F7 /* MJRefreshAutoStateFooter.m in Sources */,
 				D55C12A01C85301300A129CD /* UIProgressView+AFNetworking.m in Sources */,
+				D572C0EC1C8EA29F00A5B917 /* MJDIYHeader.m in Sources */,
 				D5FBD4761C7DA3E100082772 /* FileManage.m in Sources */,
 				D5FBD47B1C7DA3E100082772 /* LQDataModelSingle.m in Sources */,
 				D51D1FFB1C8D91F600E244F7 /* MJRefreshBackStateFooter.m in Sources */,

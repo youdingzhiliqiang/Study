@@ -14,6 +14,7 @@
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 #import "MJRefresh.h"
+#import "MJDIYHeader.h"
 @interface LQBaseVCL : UIViewController <MBProgressHUDDelegate>
 //用于统一的页面传值
 @property (nonatomic,strong) NSDictionary *params;

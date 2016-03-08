@@ -45,7 +45,7 @@
 
 - (void)addRefresh
 {
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJDIYHeader headerWithRefreshingBlock:^{
         [self addDataSource];
     }];
 }
