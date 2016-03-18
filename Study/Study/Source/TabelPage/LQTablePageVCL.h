@@ -7,8 +7,16 @@
 //
 
 #import "LQBaseVCL.h"
+#import "LQFirstTCL.h"
+#import "LQSecondTCL.h"
+#import "LQThirdTCL.h"
+#import "LQFourthTCL.h"
+@interface LQTablePageVCL : LQBaseVCL <UIScrollViewDelegate>
 
-@interface LQTablePageVCL : LQBaseVCL
-@property (weak, nonatomic) IBOutlet UIView *contentView;
-@property (nonatomic,strong) UIViewController *currentVCL;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
+@property (nonatomic,strong) NSMutableArray *viewControlerArray;
+@property (nonatomic,strong) LQFirstTCL *firstVCL;
+@property (nonatomic,strong) LQSecondTCL *secondVCL;
+@property (nonatomic,strong) LQThirdTCL *thirdVCL;
+@property (nonatomic,strong) LQFourthTCL *fourthVCL;
 @end

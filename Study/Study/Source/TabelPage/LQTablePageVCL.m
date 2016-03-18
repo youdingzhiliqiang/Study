@@ -7,10 +7,6 @@
 //
 
 #import "LQTablePageVCL.h"
-#import "LQFirstTCL.h"
-#import "LQSecondTCL.h"
-#import "LQThirdTCL.h"
-#import "LQFourthTCL.h"
 @interface LQTablePageVCL ()
 
 @end
@@ -20,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setScrollview];
     [self addBackButton];
     [self addChildViewcontroller];
 }
@@ -29,46 +26,104 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 添加 childviewcontroller
+#pragma mark - scrollview的设置和创建
+
+- (void)setScrollview
+{
+    self.scrollview.delegate = self;
+    self.scrollview.pagingEnabled = YES;
+    self.scrollview.showsHorizontalScrollIndicator = NO;
+    self.scrollview.showsVerticalScrollIndicator = NO;
+    self.scrollview.contentSize = CGSizeMake(SCREEN_WIDTH*4, self.scrollview.frame.size.height);
+}
+
+
+#pragma mark - 添加 VIEW
 - (void)addChildViewcontroller
 {
-    LQFirstTCL *first = [self.storyboard instantiateViewControllerWithIdentifier:@"LQFirstTCL"];
-    [self addChildViewController:first];
+    self.viewControlerArray = [[NSMutableArray alloc] init];
+    self.firstVCL = [self.storyboard instantiateViewControllerWithIdentifier:@"LQFirstTCL"];
+    [self.viewControlerArray addObject:self.firstVCL];
+    self.secondVCL = [self.storyboard instantiateViewControllerWithIdentifier:@"LQSecondTCL"];
+    [self.viewControlerArray addObject:self.secondVCL];
+    self.thirdVCL = [self.storyboard instantiateViewControllerWithIdentifier:@"LQThirdTCL"];
+    [self.viewControlerArray addObject:self.thirdVCL];
+    self.fourthVCL = [self.storyboard instantiateViewControllerWithIdentifier:@"LQFourthTCL"];
+    [self.viewControlerArray addObject:self.fourthVCL];
     
-    LQSecondTCL *second = [self.storyboard instantiateViewControllerWithIdentifier:@"LQSecondTCL"];
-    [self addChildViewController:second];
-    
-    LQThirdTCL *third = [self.storyboard instantiateViewControllerWithIdentifier:@"LQThirdTCL"];
-    [self addChildViewController:third];
-    
-    LQFourthTCL *fourth = [self.storyboard instantiateViewControllerWithIdentifier:@"LQFourthTCL"];
-    [self addChildViewController:fourth];
-    
-    for (UIViewController *viewController in self.childViewControllers) {
+    for (UITableViewController *viewController in self.viewControlerArray) {
+        NSInteger i = [self.viewControlerArray indexOfObject:viewController];
         CGRect rect = viewController.view.frame;
-        rect.origin = CGPointMake(0, 0);
-        rect.size = self.contentView.frame.size;
+        rect.origin = CGPointMake(SCREEN_WIDTH*i, 0);
+        rect.size = self.scrollview.frame.size;
         viewController.view.frame = rect;
+        [self.scrollview addSubview:viewController.view];
     }
-    [self.contentView addSubview:first.view];
-    self.currentVCL = first;
+    
+    [self addChildViewController:self.firstVCL];
+    [self addChildViewController:self.secondVCL];
+    [self addChildViewController:self.thirdVCL];
+    [self addChildViewController:self.fourthVCL];
+}
+
+#pragma mark - scrollView代理函数
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger viewInt = self.scrollview.contentOffset.x/320;
+    switch (viewInt) {
+        case 0:
+            if (self.firstVCL.isFirstLoadData == NO) {
+               [self.firstVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        case 1:
+            if (self.secondVCL.isFirstLoadData == NO) {
+                [self.secondVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        case 2:
+            if (self.thirdVCL.isFirstLoadData == NO) {
+                [self.thirdVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        case 3:
+            if (self.fourthVCL.isFirstLoadData == NO) {
+                [self.fourthVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark 按钮点击切换view
 - (IBAction)buttonClick:(UIButton *)sender {
-    NSInteger i = [self.childViewControllers indexOfObject:self.currentVCL];
-    if (i+1 == sender.tag) {
-        return;
+    [self.scrollview setContentOffset:CGPointMake(SCREEN_WIDTH*(sender.tag-1), 0)];
+    switch (sender.tag-1) {
+        case 0:
+            if (self.firstVCL.isFirstLoadData == NO) {
+                [self.firstVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        case 1:
+            if (self.secondVCL.isFirstLoadData == NO) {
+                [self.secondVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        case 2:
+            if (self.thirdVCL.isFirstLoadData == NO) {
+                [self.thirdVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        case 3:
+            if (self.fourthVCL.isFirstLoadData == NO) {
+                [self.fourthVCL.tableView.mj_header beginRefreshing];
+            }
+            break;
+        default:
+            break;
     }
-    
-    UIViewController *viewController = [self.childViewControllers objectAtIndex:sender.tag-1];
-    [self transitionFromViewController:self.currentVCL toViewController:viewController duration:1 options:UIViewAnimationOptionLayoutSubviews  animations:^{
-        
-    } completion:^(BOOL finished) {
-        if (finished) {
-            self.currentVCL = viewController;
-        }
-    }];
 }
 
 /*

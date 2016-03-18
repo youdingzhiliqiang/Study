@@ -8,6 +8,7 @@
 
 #import "LQFourthTCL.h"
 #import "LQTitleCell.h"
+#import "LQShowVCL.h"
 @interface LQFourthTCL ()
 
 @end
@@ -18,9 +19,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self addRefresh];
-    if (self.dataArray.count == 0) {
-        [self.tableView.mj_header beginRefreshing];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +30,7 @@
 
 - (void)addDataSource
 {
+    self.isFirstLoadData = YES;
     [self.dataArray removeAllObjects];
     for (int i = 0; i < 20; i++) {
         NSString *str = [NSString stringWithFormat:@"页面四：%d",i];
@@ -77,7 +76,12 @@
     cell.titleLabel.text = self.dataArray[indexPath.row];
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LQShowVCL *showVCL = [self.storyboard instantiateViewControllerWithIdentifier:@"LQShowVCL"];
+    [showVCL setValue:@{@"fromVCL":@"第四个页面而来",@"fromLine":[NSString stringWithFormat:@"第%d行而来",(int)indexPath.row+1]} forKey:@"params"];
+    [self.navigationController pushViewController:showVCL animated:YES];
+}
 
 /*
 #pragma mark - Navigation

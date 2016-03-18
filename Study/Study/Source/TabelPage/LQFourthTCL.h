@@ -9,5 +9,5 @@
 #import "LQBaseTCL.h"
 
 @interface LQFourthTCL : LQBaseTCL
-
+@property (nonatomic,assign) BOOL isFirstLoadData;
 @end

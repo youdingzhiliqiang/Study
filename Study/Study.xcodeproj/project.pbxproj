@@ -53,6 +53,7 @@
 		D563DA2D1C8827E900A1E205 /* LQMultiThreadTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D563DA2C1C8827E900A1E205 /* LQMultiThreadTCL.m */; };
 		D563DA301C882B8200A1E205 /* LQGcdVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D563DA2F1C882B8200A1E205 /* LQGcdVCL.m */; };
 		D563DA321C882B9100A1E205 /* LQGcdVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D563DA311C882B9100A1E205 /* LQGcdVCL.storyboard */; };
+		D56E8DB81C9BE92300F6D405 /* LQShowVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D56E8DB71C9BE92300F6D405 /* LQShowVCL.m */; };
 		D56F8A671C842E39006E4701 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8A661C842E39006E4701 /* ImageCache.m */; };
 		D56F8AA11C8433DC006E4701 /* LQImageCacheVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D56F8AA01C8433DC006E4701 /* LQImageCacheVCL.m */; };
 		D56F8AA31C8433ED006E4701 /* LQImageCacheVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56F8AA21C8433ED006E4701 /* LQImageCacheVCL.storyboard */; };
@@ -186,6 +187,8 @@
 		D563DA2E1C882B8200A1E205 /* LQGcdVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQGcdVCL.h; sourceTree = "<group>"; };
 		D563DA2F1C882B8200A1E205 /* LQGcdVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQGcdVCL.m; sourceTree = "<group>"; };
 		D563DA311C882B9100A1E205 /* LQGcdVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQGcdVCL.storyboard; sourceTree = "<group>"; };
+		D56E8DB61C9BE92300F6D405 /* LQShowVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQShowVCL.h; sourceTree = "<group>"; };
+		D56E8DB71C9BE92300F6D405 /* LQShowVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQShowVCL.m; sourceTree = "<group>"; };
 		D56F8A651C842E39006E4701 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		D56F8A661C842E39006E4701 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 		D56F8A9F1C8433DC006E4701 /* LQImageCacheVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQImageCacheVCL.h; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				D508500C1C8D7D0E00B1D4ED /* LQThirdTCL.m */,
 				D508500E1C8D7D1E00B1D4ED /* LQFourthTCL.h */,
 				D508500F1C8D7D1E00B1D4ED /* LQFourthTCL.m */,
+				D56E8DB61C9BE92300F6D405 /* LQShowVCL.h */,
+				D56E8DB71C9BE92300F6D405 /* LQShowVCL.m */,
 			);
 			path = TabelPage;
 			sourceTree = "<group>";
@@ -733,7 +738,6 @@
 				TargetAttributes = {
 					D5FBD3C31C7DA30D00082772 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = GF8KQSMHLY;
 					};
 				};
 			};
@@ -817,6 +821,7 @@
 				D58B9F1B1C7FF875006C1A8B /* LQTitleDetailCell.m in Sources */,
 				D55C129E1C85301300A129CD /* UIButton+AFNetworking.m in Sources */,
 				D5FBD3C91C7DA30D00082772 /* main.m in Sources */,
+				D56E8DB81C9BE92300F6D405 /* LQShowVCL.m in Sources */,
 				D51D1FFE1C8D91F600E244F7 /* MJRefreshStateHeader.m in Sources */,
 				D55C12941C85301300A129CD /* AFHTTPSessionManager.m in Sources */,
 				D56F8AA11C8433DC006E4701 /* LQImageCacheVCL.m in Sources */,
@@ -954,9 +959,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = liqiang.Study;
+				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -965,9 +971,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = liqiang.Study;
+				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

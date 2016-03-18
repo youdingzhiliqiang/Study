@@ -8,6 +8,7 @@
 
 #import "LQFirstTCL.h"
 #import "LQTitleCell.h"
+#import "LQShowVCL.h"
 @interface LQFirstTCL ()
 
 @end
@@ -18,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self addRefresh];
-    [self.tableView.mj_header beginRefreshing];
+    [self addDataSource];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +30,7 @@
 #pragma mark - 添加数据源
 - (void)addDataSource
 {
+    self.isFirstLoadData = YES;
     [self.dataArray removeAllObjects];
     for (int i = 0; i < 20; i++) {
         NSString *str = [NSString stringWithFormat:@"页面一：%d",i];
@@ -72,6 +74,13 @@
     LQTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LQTitleCell" forIndexPath:indexPath];
     cell.titleLabel.text = self.dataArray[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LQShowVCL *showVCL = [self.storyboard instantiateViewControllerWithIdentifier:@"LQShowVCL"];
+    [showVCL setValue:@{@"fromVCL":@"第一个页面而来",@"fromLine":[NSString stringWithFormat:@"第%d行而来",(int)indexPath.row+1]} forKey:@"params"];
+    [self.navigationController pushViewController:showVCL animated:YES];
 }
 
 /*
