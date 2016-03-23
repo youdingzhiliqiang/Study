@@ -70,7 +70,7 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSInteger viewInt = self.scrollview.contentOffset.x/320;
+    NSInteger viewInt = self.scrollview.contentOffset.x/SCREEN_WIDTH;
     switch (viewInt) {
         case 0:
             if (self.firstVCL.isFirstLoadData == NO) {
