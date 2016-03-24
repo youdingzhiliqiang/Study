@@ -23,4 +23,12 @@
 //app背景色
 #define COLOR_BACKGROUND [UIColor colorWithRed:246/255.0 green:246/255.0 blue:248/255.0 alpha:1]
 
+#pragma mark - 字体
+
+#define FONT_12 [UIFont systemFontOfSize:12]
+#define FONT_14 [UIFont systemFontOfSize:14]
+#define FONT_16 [UIFont systemFontOfSize:16]
+#define font_18 [UIFont systemFontOfSize:18]
+
+
 #endif /* common_h */

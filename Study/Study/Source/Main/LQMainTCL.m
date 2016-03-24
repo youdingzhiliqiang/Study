@@ -15,6 +15,7 @@
 #import "LQMultiThreadTCL.h"
 #import "LQBlockVCL.h"
 #import "LQTablePageVCL.h"
+#import "LQCellAdjustTCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -38,7 +39,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -96,6 +97,10 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQTablePageVCL" bundle:nil];
         LQTablePageVCL *pageVCL = [storyboard instantiateViewControllerWithIdentifier:@"LQTablePageVCL"];
         [self.navigationController pushViewController:pageVCL animated:YES];
+    } else if (indexPath.row == 7) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQCellAdjustTCL" bundle:nil];
+        LQCellAdjustTCL *cellAdjust = [storyboard instantiateViewControllerWithIdentifier:@"LQCellAdjustTCL"];
+        [self.navigationController pushViewController:cellAdjust animated:YES];
     }
 }
 
