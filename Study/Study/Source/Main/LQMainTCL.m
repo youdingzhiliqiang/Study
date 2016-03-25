@@ -16,6 +16,7 @@
 #import "LQBlockVCL.h"
 #import "LQTablePageVCL.h"
 #import "LQCellAdjustTCL.h"
+#import "LQBannerScrollForeverVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -39,7 +40,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -101,6 +102,10 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQCellAdjustTCL" bundle:nil];
         LQCellAdjustTCL *cellAdjust = [storyboard instantiateViewControllerWithIdentifier:@"LQCellAdjustTCL"];
         [self.navigationController pushViewController:cellAdjust animated:YES];
+    } else if (indexPath.row == 8) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQBannerScrollForeverVCL" bundle:nil];
+        LQBannerScrollForeverVCL *bannerScrollView = [storyboard instantiateViewControllerWithIdentifier:@"LQBannerScrollForeverVCL"];
+        [self.navigationController pushViewController:bannerScrollView animated:YES];
     }
 }
 

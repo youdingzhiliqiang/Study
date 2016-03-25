@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="t7F-kb-JQ3">
+            <objects>
+                <navigationController id="qCJ-Vy-Yzq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zce-e1-tJd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AlW-Vd-3sB" kind="relationship" relationship="rootViewController" id="qyA-0t-YIK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1u-ug-Jro" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.66666666666666" y="310.50666666666666"/>
+        </scene>
+        <!--Banner Scroll ForeverVCL-->
+        <scene sceneID="4Tr-Ep-h51">
+            <objects>
+                <viewController storyboardIdentifier="LQBannerScrollForeverVCL" id="AlW-Vd-3sB" customClass="LQBannerScrollForeverVCL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qUf-yM-KBt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bFC-1k-ey7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WN5-rC-wnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="310"/>
+        </scene>
+    </scenes>
+</document>

@@ -35,6 +35,9 @@
 		D54BBEF81CA394AD0050308D /* LQCellAdjustTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBEF71CA394AD0050308D /* LQCellAdjustTCL.m */; };
 		D54BBEFA1CA394C80050308D /* LQCellAdjustTCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54BBEF91CA394C80050308D /* LQCellAdjustTCL.storyboard */; };
 		D54BBEFE1CA3C6AD0050308D /* LQCellAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBEFD1CA3C6AD0050308D /* LQCellAdjust.m */; };
+		D54BBF021CA3D7350050308D /* LQBannerScrollForeverVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBF011CA3D7350050308D /* LQBannerScrollForeverVCL.m */; };
+		D54BBF041CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54BBF031CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard */; };
+		D54BBF0B1CA3DBC10050308D /* LQBannerScrollForeverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBF0A1CA3DBC10050308D /* LQBannerScrollForeverView.m */; };
 		D55C12921C85301300A129CD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C126E1C85301300A129CD /* AFHTTPRequestOperation.m */; };
 		D55C12931C85301300A129CD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C12701C85301300A129CD /* AFHTTPRequestOperationManager.m */; };
 		D55C12941C85301300A129CD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C12721C85301300A129CD /* AFHTTPSessionManager.m */; };
@@ -152,6 +155,11 @@
 		D54BBEF91CA394C80050308D /* LQCellAdjustTCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQCellAdjustTCL.storyboard; sourceTree = "<group>"; };
 		D54BBEFC1CA3C6AD0050308D /* LQCellAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCellAdjust.h; sourceTree = "<group>"; };
 		D54BBEFD1CA3C6AD0050308D /* LQCellAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCellAdjust.m; sourceTree = "<group>"; };
+		D54BBF001CA3D7350050308D /* LQBannerScrollForeverVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBannerScrollForeverVCL.h; sourceTree = "<group>"; };
+		D54BBF011CA3D7350050308D /* LQBannerScrollForeverVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBannerScrollForeverVCL.m; sourceTree = "<group>"; };
+		D54BBF031CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQBannerScrollForeverVCL.storyboard; sourceTree = "<group>"; };
+		D54BBF091CA3DBC10050308D /* LQBannerScrollForeverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBannerScrollForeverView.h; sourceTree = "<group>"; };
+		D54BBF0A1CA3DBC10050308D /* LQBannerScrollForeverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBannerScrollForeverView.m; sourceTree = "<group>"; };
 		D55C126D1C85301300A129CD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		D55C126E1C85301300A129CD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		D55C126F1C85301300A129CD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -410,6 +418,26 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		D54BBEFF1CA3D6530050308D /* BannerScrollForever */ = {
+			isa = PBXGroup;
+			children = (
+				D54BBF001CA3D7350050308D /* LQBannerScrollForeverVCL.h */,
+				D54BBF011CA3D7350050308D /* LQBannerScrollForeverVCL.m */,
+				D54BBF031CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard */,
+			);
+			path = BannerScrollForever;
+			sourceTree = "<group>";
+		};
+		D54BBF051CA3D76B0050308D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D54BBF091CA3DBC10050308D /* LQBannerScrollForeverView.h */,
+				D54BBF0A1CA3DBC10050308D /* LQBannerScrollForeverView.m */,
+			);
+			name = view;
+			path = Study/Source/BannerScrollForever/view;
+			sourceTree = SOURCE_ROOT;
+		};
 		D55C126C1C85301300A129CD /* AFNetworking-2.5.4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +643,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D54BBEFF1CA3D6530050308D /* BannerScrollForever */,
 				D54BBEF51CA394870050308D /* TestAdjust */,
 				D5084FFF1C8D7B8700B1D4ED /* TabelPage */,
 				D578CA0C1C897A6800ADAAC2 /* Block */,
@@ -645,6 +674,7 @@
 		D5FBD44B1C7DA3E100082772 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D54BBF051CA3D76B0050308D /* view */,
 				D572C0E61C8EA29F00A5B917 /* MJDIY */,
 				D5F56C061C8584AA00C9B5AA /* addtion */,
 				D5FBD44C1C7DA3E100082772 /* cell */,
@@ -801,6 +831,7 @@
 				D563DA321C882B9100A1E205 /* LQGcdVCL.storyboard in Resources */,
 				D58B9F311C802D3A006C1A8B /* LQCodingVCL.storyboard in Resources */,
 				D5FBD4741C7DA3E100082772 /* LQTransformVCL.storyboard in Resources */,
+				D54BBF041CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard in Resources */,
 				D51D1FFF1C8D91F600E244F7 /* MJRefresh.bundle in Resources */,
 				D5FBD3D41C7DA30D00082772 /* Assets.xcassets in Resources */,
 				D578CA111C898FF300ADAAC2 /* LQBlockVCL.storyboard in Resources */,
@@ -820,6 +851,7 @@
 				D50850021C8D7B9E00B1D4ED /* LQTablePageVCL.m in Sources */,
 				D55C12971C85301300A129CD /* AFURLConnectionOperation.m in Sources */,
 				D563DA301C882B8200A1E205 /* LQGcdVCL.m in Sources */,
+				D54BBF021CA3D7350050308D /* LQBannerScrollForeverVCL.m in Sources */,
 				D5FBD3CC1C7DA30D00082772 /* AppDelegate.m in Sources */,
 				D508500A1C8D7D0000B1D4ED /* LQSecondTCL.m in Sources */,
 				D5FBD4751C7DA3E100082772 /* LQTitleCell.m in Sources */,
@@ -860,6 +892,7 @@
 				D51D20021C8D91F600E244F7 /* UIScrollView+MJRefresh.m in Sources */,
 				D508500D1C8D7D0E00B1D4ED /* LQThirdTCL.m in Sources */,
 				D5FBD4791C7DA3E100082772 /* LQBaseTCL.m in Sources */,
+				D54BBF0B1CA3DBC10050308D /* LQBannerScrollForeverView.m in Sources */,
 				D51D20001C8D91F600E244F7 /* MJRefreshConst.m in Sources */,
 				D55C129B1C85301300A129CD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D50850071C8D7CF200B1D4ED /* LQFirstTCL.m in Sources */,

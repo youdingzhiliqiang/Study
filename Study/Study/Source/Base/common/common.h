@@ -22,6 +22,8 @@
 #pragma mark - 颜色
 //app背景色
 #define COLOR_BACKGROUND [UIColor colorWithRed:246/255.0 green:246/255.0 blue:248/255.0 alpha:1]
+//红粉色
+#define COLOR_PINK [UIColor colorWithRed:238/255.0 green:84/255.0 blue:84/255.0 alpha:1]
 
 #pragma mark - 字体
 
