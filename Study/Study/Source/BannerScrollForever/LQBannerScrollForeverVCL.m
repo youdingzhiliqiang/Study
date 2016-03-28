@@ -8,7 +8,7 @@
 
 #import "LQBannerScrollForeverVCL.h"
 @interface LQBannerScrollForeverVCL ()
-
+@property (nonatomic,strong) LQBannerScrollForeverView *bannerView;
 @end
 
 @implementation LQBannerScrollForeverVCL
@@ -30,10 +30,10 @@
 
 - (void)addBannerScrollForever
 {
-    LQBannerScrollForeverView *view = [[LQBannerScrollForeverView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH,SCREEN_WIDTH)];
+    _bannerView = [[LQBannerScrollForeverView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH,SCREEN_WIDTH)];
     NSArray *array = [NSArray arrayWithObjects:@"电影",@"篮球",@"跑步",@"游戏", nil];
-    [view createScrollViewWithImageArray:array placeImage:nil delegate:self];
-    [self.view addSubview:view];
+    [_bannerView createScrollViewWithImageArray:array placeImage:nil delegate:self];
+    [self.view addSubview:_bannerView];
 }
 
 #pragma mark - 添加网络加载图片轮播图
@@ -41,9 +41,9 @@
 - (void)addURLloadImageScrollviewForever
 {
     NSArray *array = [NSArray arrayWithObjects:@"http://static.udz.com/uploads/2016/2/15/38616518340252104.png.360.png",@"http://static.udz.com/uploads/2016/2/25/40256620075669765.png.360.png",@"http://static.udz.com/uploads/2016/2/25/40256100435741106.png.360.png",@"http://static.udz.com/uploads/2016/2/15/38622320286859098.png.360.png", nil];
-    LQBannerScrollForeverView *view = [[LQBannerScrollForeverView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH,SCREEN_WIDTH)];
-    [view createScrollViewWithURLImageArray:array placeImage:@"背景图" delegate:self];
-    [self.view addSubview:view];
+    _bannerView = [[LQBannerScrollForeverView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH,SCREEN_WIDTH)];
+    [_bannerView createScrollViewWithURLImageArray:array placeImage:@"背景图" delegate:self];
+    [self.view addSubview:_bannerView];
 }
 
 #pragma mark - 代理事件
@@ -51,6 +51,20 @@
 - (void)ImageViewClick:(NSInteger)currentNum
 {
     NSLog(@"===%d",(int)currentNum);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (_bannerView != nil) {
+        [_bannerView createTime];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (_bannerView != nil) {
+        [_bannerView removeTime];
+    }
 }
 
 /*

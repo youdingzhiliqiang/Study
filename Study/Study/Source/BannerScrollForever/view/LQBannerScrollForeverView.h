@@ -16,6 +16,8 @@
 
 - (void)createScrollViewWithImageArray:(NSArray *)imageArray placeImage:(NSString *)placeImage delegate:(id<ImageViewDelegate>)delegate;
 - (void)createScrollViewWithURLImageArray:(NSArray *)urlImageArray placeImage:(NSString *)placeImage delegate:(id<ImageViewDelegate>)delegate;
+- (void)createTime;
+- (void)removeTime;
 @end
 
 #pragma mark - 协议方法

@@ -46,7 +46,7 @@ enum {
 - (UIScrollView *)scrollView
 {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         _scrollView.delegate = self;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
@@ -68,6 +68,7 @@ enum {
         _pageControl.currentPageIndicatorTintColor = COLOR_PINK;
         _pageControl.numberOfPages = self.imageArray.count - 2;
         _pageControl.currentPage = 0;
+        [self addSubview:_pageControl];
     }
     return _pageControl;
 }
@@ -109,9 +110,10 @@ enum {
     } else {
         [self.imageArray addObject:[imageArray firstObject]];
     }
-    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*self.imageArray.count, self.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.frame.size.width*self.imageArray.count, self.frame.size.height);
+    [self addSubview:self.pageControl];
     for (NSInteger i = 0; i < self.imageArray.count; i++) {
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i,0, SCREEN_WIDTH, self.frame.size.height)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width*i,0, self.frame.size.width, self.frame.size.height)];
         if (imageArrayType == imageType) {
             imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:i]];
         } else if (imageArrayType == imageURLType) {
@@ -134,21 +136,15 @@ enum {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapClick:)];
         [imageView addGestureRecognizer:tap];
         
-        [self.scrollView addSubview:imageView];
+        [_scrollView addSubview:imageView];
     }
     //数据源多余3的情况下添加定时器
     if (self.imageArray.count >3) {
-        
-        CGPoint point = self.scrollView.contentOffset;
-        point.x = SCREEN_WIDTH;
-        self.scrollView.contentOffset = point;
-        
-        [self addSubview:self.pageControl];
-        
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERMINAL target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        CGPoint point = _scrollView.contentOffset;
+        point.x = self.frame.size.width;
+        _scrollView.contentOffset = point;
+        [self createTime];
     }
-    
     self.delegate = delegate;
 }
 
@@ -156,36 +152,38 @@ enum {
 
 - (void)timeChange
 {
-    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + SCREEN_WIDTH, 0) animated:YES];
-    [self timeControlScrollView:self.scrollView];
+    [_scrollView setContentOffset:CGPointMake(_scrollView.contentOffset.x + self.frame.size.width, 0) animated:YES];
+    [self timeControlScrollView:_scrollView];
 }
 
 
 #pragma mark scrollview的代理函数
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self removeTime];
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self.timer invalidate];
-    self.timer = nil;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERMINAL target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-    
-    
-    if (self.scrollView.contentOffset.x == 0 || self.scrollView.contentOffset.x == SCREEN_WIDTH *(self.imageArray.count - 2)) {
-        self.pageControl.currentPage = self.pageControl.numberOfPages;
-    } else if (self.scrollView.contentOffset.x == SCREEN_WIDTH || self.scrollView.contentOffset.x == SCREEN_WIDTH *(self.imageArray.count - 1)) {
-        self.pageControl.currentPage = 0;
+    [self createTime];
+    if (_scrollView.contentOffset.x == 0 || _scrollView.contentOffset.x == self.frame.size.width *(self.imageArray.count - 2)) {
+        _pageControl.currentPage = _pageControl.numberOfPages;
+    } else if (_scrollView.contentOffset.x == self.frame.size.width || _scrollView.contentOffset.x == self.frame.size.width *(self.imageArray.count - 1)) {
+        _pageControl.currentPage = 0;
     } else {
-        self.pageControl.currentPage = self.scrollView.contentOffset.x/SCREEN_WIDTH - 1;
+        _pageControl.currentPage = _scrollView.contentOffset.x/self.frame.size.width - 1;
     }
     
-    if (scrollView.contentOffset.x == SCREEN_WIDTH * (self.imageArray.count - 1)) {
-        CGPoint point = self.scrollView.contentOffset;
-        point.x = SCREEN_WIDTH;
-        self.scrollView.contentOffset = point;
+    
+    if (scrollView.contentOffset.x == self.frame.size.width * (self.imageArray.count - 1)) {
+        CGPoint point = _scrollView.contentOffset;
+        point.x = self.frame.size.width;
+        _scrollView.contentOffset = point;
     } else if (scrollView.contentOffset.x == 0) {
-        CGPoint point = self.scrollView.contentOffset;
-        point.x = SCREEN_WIDTH * (self.imageArray.count - 2);
-        self.scrollView.contentOffset = point;
+        CGPoint point = _scrollView.contentOffset;
+        point.x = self.frame.size.width * (self.imageArray.count - 2);
+        _scrollView.contentOffset = point;
     }
     
 }
@@ -194,20 +192,20 @@ enum {
 
 - (void)timeControlScrollView:(UIScrollView *)scrollView
 {
-    NSInteger position = scrollView.contentOffset.x / SCREEN_WIDTH;
+    NSInteger position = scrollView.contentOffset.x / self.frame.size.width;
     if (position >= self.imageArray.count - 2) {
         position = position + 2 - self.imageArray.count;
     }
-    self.pageControl.currentPage = position;
+    _pageControl.currentPage = position;
     
-    if (scrollView.contentOffset.x == SCREEN_WIDTH * (self.imageArray.count - 1)) {
-        CGPoint point = self.scrollView.contentOffset;
-        point.x = SCREEN_WIDTH;
-        self.scrollView.contentOffset = point;
+    if (scrollView.contentOffset.x == self.frame.size.width * (self.imageArray.count - 1)) {
+        CGPoint point = _scrollView.contentOffset;
+        point.x = self.frame.size.width;
+        _scrollView.contentOffset = point;
     } else if (scrollView.contentOffset.x == 0) {
-        CGPoint point = self.scrollView.contentOffset;
-        point.x = SCREEN_WIDTH * (self.imageArray.count - 2);
-        self.scrollView.contentOffset = point;
+        CGPoint point = _scrollView.contentOffset;
+        point.x = self.frame.size.width * (self.imageArray.count - 2);
+        _scrollView.contentOffset = point;
     }
 }
 
@@ -217,5 +215,25 @@ enum {
 {
     [self.delegate ImageViewClick:tap.view.tag - viewTag - 1];
 }
+
+#pragma mark - 创建定时器
+
+- (void)createTime
+{
+    if (self.timer == nil && self.imageArray.count >3) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERMINAL target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    }
+}
+
+#pragma mark- 移除定时器
+- (void)removeTime
+{
+    if (self.timer != nil) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+
 
 @end
