@@ -32,12 +32,12 @@
 		D51D20011C8D91F600E244F7 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D1FEC1C8D91F600E244F7 /* UIScrollView+MJExtension.m */; };
 		D51D20021C8D91F600E244F7 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D1FEE1C8D91F600E244F7 /* UIScrollView+MJRefresh.m */; };
 		D51D20031C8D91F600E244F7 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D1FF01C8D91F600E244F7 /* UIView+MJExtension.m */; };
+		D5389F461CA9216E00B2D0DA /* LQBannerScrollForeverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5389F451CA9216E00B2D0DA /* LQBannerScrollForeverView.m */; };
 		D54BBEF81CA394AD0050308D /* LQCellAdjustTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBEF71CA394AD0050308D /* LQCellAdjustTCL.m */; };
 		D54BBEFA1CA394C80050308D /* LQCellAdjustTCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54BBEF91CA394C80050308D /* LQCellAdjustTCL.storyboard */; };
 		D54BBEFE1CA3C6AD0050308D /* LQCellAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBEFD1CA3C6AD0050308D /* LQCellAdjust.m */; };
 		D54BBF021CA3D7350050308D /* LQBannerScrollForeverVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBF011CA3D7350050308D /* LQBannerScrollForeverVCL.m */; };
 		D54BBF041CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54BBF031CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard */; };
-		D54BBF0B1CA3DBC10050308D /* LQBannerScrollForeverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBF0A1CA3DBC10050308D /* LQBannerScrollForeverView.m */; };
 		D55C12921C85301300A129CD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C126E1C85301300A129CD /* AFHTTPRequestOperation.m */; };
 		D55C12931C85301300A129CD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C12701C85301300A129CD /* AFHTTPRequestOperationManager.m */; };
 		D55C12941C85301300A129CD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C12721C85301300A129CD /* AFHTTPSessionManager.m */; };
@@ -150,6 +150,8 @@
 		D51D1FEE1C8D91F600E244F7 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		D51D1FEF1C8D91F600E244F7 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		D51D1FF01C8D91F600E244F7 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		D5389F441CA9216E00B2D0DA /* LQBannerScrollForeverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBannerScrollForeverView.h; sourceTree = "<group>"; };
+		D5389F451CA9216E00B2D0DA /* LQBannerScrollForeverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBannerScrollForeverView.m; sourceTree = "<group>"; };
 		D54BBEF61CA394AD0050308D /* LQCellAdjustTCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCellAdjustTCL.h; sourceTree = "<group>"; };
 		D54BBEF71CA394AD0050308D /* LQCellAdjustTCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCellAdjustTCL.m; sourceTree = "<group>"; };
 		D54BBEF91CA394C80050308D /* LQCellAdjustTCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQCellAdjustTCL.storyboard; sourceTree = "<group>"; };
@@ -158,8 +160,6 @@
 		D54BBF001CA3D7350050308D /* LQBannerScrollForeverVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBannerScrollForeverVCL.h; sourceTree = "<group>"; };
 		D54BBF011CA3D7350050308D /* LQBannerScrollForeverVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBannerScrollForeverVCL.m; sourceTree = "<group>"; };
 		D54BBF031CA3D7490050308D /* LQBannerScrollForeverVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQBannerScrollForeverVCL.storyboard; sourceTree = "<group>"; };
-		D54BBF091CA3DBC10050308D /* LQBannerScrollForeverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBannerScrollForeverView.h; sourceTree = "<group>"; };
-		D54BBF0A1CA3DBC10050308D /* LQBannerScrollForeverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBannerScrollForeverView.m; sourceTree = "<group>"; };
 		D55C126D1C85301300A129CD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		D55C126E1C85301300A129CD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		D55C126F1C85301300A129CD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -398,6 +398,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		D5389F431CA9216E00B2D0DA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D5389F441CA9216E00B2D0DA /* LQBannerScrollForeverView.h */,
+				D5389F451CA9216E00B2D0DA /* LQBannerScrollForeverView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		D54BBEF51CA394870050308D /* TestAdjust */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,16 +436,6 @@
 			);
 			path = BannerScrollForever;
 			sourceTree = "<group>";
-		};
-		D54BBF051CA3D76B0050308D /* view */ = {
-			isa = PBXGroup;
-			children = (
-				D54BBF091CA3DBC10050308D /* LQBannerScrollForeverView.h */,
-				D54BBF0A1CA3DBC10050308D /* LQBannerScrollForeverView.m */,
-			);
-			name = view;
-			path = Study/Source/BannerScrollForever/view;
-			sourceTree = SOURCE_ROOT;
 		};
 		D55C126C1C85301300A129CD /* AFNetworking-2.5.4 */ = {
 			isa = PBXGroup;
@@ -674,7 +673,7 @@
 		D5FBD44B1C7DA3E100082772 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				D54BBF051CA3D76B0050308D /* view */,
+				D5389F431CA9216E00B2D0DA /* view */,
 				D572C0E61C8EA29F00A5B917 /* MJDIY */,
 				D5F56C061C8584AA00C9B5AA /* addtion */,
 				D5FBD44C1C7DA3E100082772 /* cell */,
@@ -892,10 +891,10 @@
 				D51D20021C8D91F600E244F7 /* UIScrollView+MJRefresh.m in Sources */,
 				D508500D1C8D7D0E00B1D4ED /* LQThirdTCL.m in Sources */,
 				D5FBD4791C7DA3E100082772 /* LQBaseTCL.m in Sources */,
-				D54BBF0B1CA3DBC10050308D /* LQBannerScrollForeverView.m in Sources */,
 				D51D20001C8D91F600E244F7 /* MJRefreshConst.m in Sources */,
 				D55C129B1C85301300A129CD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D50850071C8D7CF200B1D4ED /* LQFirstTCL.m in Sources */,
+				D5389F461CA9216E00B2D0DA /* LQBannerScrollForeverView.m in Sources */,
 				D51D1FF71C8D91F600E244F7 /* MJRefreshAutoNormalFooter.m in Sources */,
 				D55C12931C85301300A129CD /* AFHTTPRequestOperationManager.m in Sources */,
 				D54BBEF81CA394AD0050308D /* LQCellAdjustTCL.m in Sources */,
