@@ -69,6 +69,13 @@
 		D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D578CA0E1C897D4100ADAAC2 /* LQBlockVCL.m */; };
 		D578CA111C898FF300ADAAC2 /* LQBlockVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D578CA101C898FF300ADAAC2 /* LQBlockVCL.storyboard */; };
 		D578CA141C89905800ADAAC2 /* LQNextBlockVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D578CA131C89905800ADAAC2 /* LQNextBlockVCL.m */; };
+		D57C3FAA1CBF7F61006325AA /* LQWebVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C3FA91CBF7F61006325AA /* LQWebVCL.m */; };
+		D57C3FB01CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C3FAF1CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.m */; };
+		D57C3FB21CBF936D006325AA /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = D57C3FB11CBF936D006325AA /* ExampleApp.html */; };
+		D57C3FBC1CBFA29B006325AA /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C3FB51CBFA29B006325AA /* WebViewJavascriptBridge.m */; };
+		D57C3FBD1CBFA29B006325AA /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C3FB71CBFA29B006325AA /* WebViewJavascriptBridge_JS.m */; };
+		D57C3FBE1CBFA29B006325AA /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C3FB91CBFA29B006325AA /* WebViewJavascriptBridgeBase.m */; };
+		D57C3FBF1CBFA29B006325AA /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C3FBB1CBFA29B006325AA /* WKWebViewJavascriptBridge.m */; };
 		D58B9F1B1C7FF875006C1A8B /* LQTitleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F1A1C7FF875006C1A8B /* LQTitleDetailCell.m */; };
 		D58B9F2B1C802D3A006C1A8B /* CoredataStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F1E1C802D3A006C1A8B /* CoredataStudy.xcdatamodeld */; };
 		D58B9F2C1C802D3A006C1A8B /* LQCoredataVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F211C802D3A006C1A8B /* LQCoredataVCL.m */; };
@@ -220,6 +227,19 @@
 		D578CA101C898FF300ADAAC2 /* LQBlockVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQBlockVCL.storyboard; sourceTree = "<group>"; };
 		D578CA121C89905800ADAAC2 /* LQNextBlockVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQNextBlockVCL.h; sourceTree = "<group>"; };
 		D578CA131C89905800ADAAC2 /* LQNextBlockVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQNextBlockVCL.m; sourceTree = "<group>"; };
+		D57C3FA81CBF7F61006325AA /* LQWebVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQWebVCL.h; sourceTree = "<group>"; };
+		D57C3FA91CBF7F61006325AA /* LQWebVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQWebVCL.m; sourceTree = "<group>"; };
+		D57C3FAE1CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQWebViewJavascriptBridgeVCL.h; sourceTree = "<group>"; };
+		D57C3FAF1CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQWebViewJavascriptBridgeVCL.m; sourceTree = "<group>"; };
+		D57C3FB11CBF936D006325AA /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
+		D57C3FB41CBFA29B006325AA /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		D57C3FB51CBFA29B006325AA /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		D57C3FB61CBFA29B006325AA /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		D57C3FB71CBFA29B006325AA /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		D57C3FB81CBFA29B006325AA /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		D57C3FB91CBFA29B006325AA /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		D57C3FBA1CBFA29B006325AA /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		D57C3FBB1CBFA29B006325AA /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		D58B9F191C7FF875006C1A8B /* LQTitleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQTitleDetailCell.h; sourceTree = "<group>"; };
 		D58B9F1A1C7FF875006C1A8B /* LQTitleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQTitleDetailCell.m; sourceTree = "<group>"; };
 		D58B9F1F1C802D3A006C1A8B /* CoredataStudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataStudy.xcdatamodel; sourceTree = "<group>"; };
@@ -548,6 +568,30 @@
 			path = Block;
 			sourceTree = "<group>";
 		};
+		D57C3FAD1CBF850B006325AA /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				D57C3FAE1CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.h */,
+				D57C3FAF1CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		D57C3FB31CBFA29B006325AA /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				D57C3FB41CBFA29B006325AA /* WebViewJavascriptBridge.h */,
+				D57C3FB51CBFA29B006325AA /* WebViewJavascriptBridge.m */,
+				D57C3FB61CBFA29B006325AA /* WebViewJavascriptBridge_JS.h */,
+				D57C3FB71CBFA29B006325AA /* WebViewJavascriptBridge_JS.m */,
+				D57C3FB81CBFA29B006325AA /* WebViewJavascriptBridgeBase.h */,
+				D57C3FB91CBFA29B006325AA /* WebViewJavascriptBridgeBase.m */,
+				D57C3FBA1CBFA29B006325AA /* WKWebViewJavascriptBridge.h */,
+				D57C3FBB1CBFA29B006325AA /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 		D58B9F1C1C802D3A006C1A8B /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +679,7 @@
 			isa = PBXGroup;
 			children = (
 				D5FBD3DF1C7DA3E100082772 /* address.json */,
+				D57C3FB11CBF936D006325AA /* ExampleApp.html */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -642,6 +687,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D57C3FAD1CBF850B006325AA /* WebViewJavascriptBridge */,
 				D54BBEFF1CA3D6530050308D /* BannerScrollForever */,
 				D54BBEF51CA394870050308D /* TestAdjust */,
 				D5084FFF1C8D7B8700B1D4ED /* TabelPage */,
@@ -718,6 +764,8 @@
 				D5FBD4591C7DA3E100082772 /* LQBaseTCL.m */,
 				D5FBD45A1C7DA3E100082772 /* LQBaseVCL.h */,
 				D5FBD45B1C7DA3E100082772 /* LQBaseVCL.m */,
+				D57C3FA81CBF7F61006325AA /* LQWebVCL.h */,
+				D57C3FA91CBF7F61006325AA /* LQWebVCL.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -748,6 +796,7 @@
 		D5FBD46C1C7DA3E100082772 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				D57C3FB31CBFA29B006325AA /* WebViewJavascriptBridge */,
 				D51D1FC41C8D91F600E244F7 /* MJRefresh-3.0.2 */,
 				D55C126C1C85301300A129CD /* AFNetworking-2.5.4 */,
 				D55C12801C85301300A129CD /* UIKit+AFNetworking-2.5.4 */,
@@ -837,6 +886,7 @@
 				D58B9F2D1C802D3A006C1A8B /* LQCoredataVCL.storyboard in Resources */,
 				D5FBD4701C7DA3E100082772 /* address.json in Resources */,
 				D50850041C8D7BAB00B1D4ED /* LQTablePageVCL.storyboard in Resources */,
+				D57C3FB21CBF936D006325AA /* ExampleApp.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +909,7 @@
 				D55C12921C85301300A129CD /* AFHTTPRequestOperation.m in Sources */,
 				D55C12991C85301300A129CD /* AFURLResponseSerialization.m in Sources */,
 				D58B9F301C802D3A006C1A8B /* LQCodingVCL.m in Sources */,
+				D57C3FBD1CBFA29B006325AA /* WebViewJavascriptBridge_JS.m in Sources */,
 				D51D1FF51C8D91F600E244F7 /* MJRefreshHeader.m in Sources */,
 				D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */,
 				D55C129F1C85301300A129CD /* UIImageView+AFNetworking.m in Sources */,
@@ -876,6 +927,7 @@
 				D563DA221C88172A00A1E205 /* LQClearCacheVCL.m in Sources */,
 				D5FBD47A1C7DA3E100082772 /* LQBaseVCL.m in Sources */,
 				D51D1FF41C8D91F600E244F7 /* MJRefreshFooter.m in Sources */,
+				D57C3FB01CBF8534006325AA /* LQWebViewJavascriptBridgeVCL.m in Sources */,
 				D55C12961C85301300A129CD /* AFSecurityPolicy.m in Sources */,
 				D55C129A1C85301300A129CD /* AFURLSessionManager.m in Sources */,
 				D54BBEFE1CA3C6AD0050308D /* LQCellAdjust.m in Sources */,
@@ -896,6 +948,7 @@
 				D50850071C8D7CF200B1D4ED /* LQFirstTCL.m in Sources */,
 				D5389F461CA9216E00B2D0DA /* LQBannerScrollForeverView.m in Sources */,
 				D51D1FF71C8D91F600E244F7 /* MJRefreshAutoNormalFooter.m in Sources */,
+				D57C3FAA1CBF7F61006325AA /* LQWebVCL.m in Sources */,
 				D55C12931C85301300A129CD /* AFHTTPRequestOperationManager.m in Sources */,
 				D54BBEF81CA394AD0050308D /* LQCellAdjustTCL.m in Sources */,
 				D55C12981C85301300A129CD /* AFURLRequestSerialization.m in Sources */,
@@ -903,10 +956,13 @@
 				D51D1FF31C8D91F600E244F7 /* MJRefreshComponent.m in Sources */,
 				D58B9F2C1C802D3A006C1A8B /* LQCoredataVCL.m in Sources */,
 				D51D1FFD1C8D91F600E244F7 /* MJRefreshNormalHeader.m in Sources */,
+				D57C3FBF1CBFA29B006325AA /* WKWebViewJavascriptBridge.m in Sources */,
 				D572C0EB1C8EA29F00A5B917 /* MJDIYAutoFooter.m in Sources */,
 				D56F8A671C842E39006E4701 /* ImageCache.m in Sources */,
 				D51D1FFA1C8D91F600E244F7 /* MJRefreshBackNormalFooter.m in Sources */,
+				D57C3FBC1CBFA29B006325AA /* WebViewJavascriptBridge.m in Sources */,
 				D5F56C0C1C8587D300C9B5AA /* NSString+Addition.m in Sources */,
+				D57C3FBE1CBFA29B006325AA /* WebViewJavascriptBridgeBase.m in Sources */,
 				D55C129D1C85301300A129CD /* UIAlertView+AFNetworking.m in Sources */,
 				D5FBD4801C7DA3E100082772 /* LQMainTCL.m in Sources */,
 				D55C12A11C85301300A129CD /* UIRefreshControl+AFNetworking.m in Sources */,

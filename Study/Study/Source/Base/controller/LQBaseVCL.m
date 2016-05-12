@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = COLOR_BACKGROUND;
     [self addLeftSideReturn];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -17,6 +17,7 @@
 #import "LQTablePageVCL.h"
 #import "LQCellAdjustTCL.h"
 #import "LQBannerScrollForeverVCL.h"
+#import "LQWebViewJavascriptBridgeVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -40,7 +41,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -106,6 +107,9 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQBannerScrollForeverVCL" bundle:nil];
         LQBannerScrollForeverVCL *bannerScrollView = [storyboard instantiateViewControllerWithIdentifier:@"LQBannerScrollForeverVCL"];
         [self.navigationController pushViewController:bannerScrollView animated:YES];
+    } else if (indexPath.row == 9) {
+        LQWebViewJavascriptBridgeVCL *webView = [[LQWebViewJavascriptBridgeVCL alloc] init];
+        [self.navigationController pushViewController:webView animated:YES];
     }
 }
 

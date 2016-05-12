@@ -50,7 +50,7 @@
 
 - (void)ImageViewClick:(NSInteger)currentNum
 {
-    NSLog(@"===%d",(int)currentNum);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
