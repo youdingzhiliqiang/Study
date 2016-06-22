@@ -30,7 +30,7 @@
 
 - (void)obtainImageCache
 {
-    self.cacheLabel.text = [ImageCache getSizeOfImageCache];
+    //self.cacheLabel.text = [ImageCache getSizeOfImageCache];
 }
 
 #pragma mark- 清除缓存
