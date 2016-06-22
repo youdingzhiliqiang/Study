@@ -22,7 +22,7 @@
 @property (nonatomic,strong) NSDictionary *params;
 //导航添加返回按钮
 - (void)addBackButton;
-
+ 
 #pragma mark - 网络指示器
 //初始化网络指示器
 - (MBProgressHUD *)configChrysanthemum;
