@@ -4,4 +4,5 @@ target ’Study’ do
   pod 'MJRefresh', '~> 3.1.9'
   pod 'WebViewJavascriptBridge', '~> 5.0.5'
   pod 'MBProgressHUD', '~> 0.9.2'
+  pod 'Masonry', '~> 1.0.1'
 end
