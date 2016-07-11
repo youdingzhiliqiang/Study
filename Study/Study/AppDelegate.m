@@ -22,7 +22,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     NSLog(@"===%@",NSHomeDirectory());
-    NSLog(@"456");
     [self main];
     [self.window makeKeyAndVisible];
     return YES;
