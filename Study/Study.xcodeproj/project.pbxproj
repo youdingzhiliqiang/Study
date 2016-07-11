@@ -15,6 +15,7 @@
 		D508500D1C8D7D0E00B1D4ED /* LQThirdTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D508500C1C8D7D0E00B1D4ED /* LQThirdTCL.m */; };
 		D50850101C8D7D1E00B1D4ED /* LQFourthTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D508500F1C8D7D1E00B1D4ED /* LQFourthTCL.m */; };
 		D5389F461CA9216E00B2D0DA /* LQBannerScrollForeverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5389F451CA9216E00B2D0DA /* LQBannerScrollForeverView.m */; };
+		D53ED3891D2F83900080A9B3 /* LQLayoutConstraintVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D53ED3881D2F83900080A9B3 /* LQLayoutConstraintVCL.m */; };
 		D54BBEF81CA394AD0050308D /* LQCellAdjustTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBEF71CA394AD0050308D /* LQCellAdjustTCL.m */; };
 		D54BBEFA1CA394C80050308D /* LQCellAdjustTCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54BBEF91CA394C80050308D /* LQCellAdjustTCL.storyboard */; };
 		D54BBEFE1CA3C6AD0050308D /* LQCellAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = D54BBEFD1CA3C6AD0050308D /* LQCellAdjust.m */; };
@@ -84,6 +85,8 @@
 		D508500F1C8D7D1E00B1D4ED /* LQFourthTCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQFourthTCL.m; sourceTree = "<group>"; };
 		D5389F441CA9216E00B2D0DA /* LQBannerScrollForeverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQBannerScrollForeverView.h; sourceTree = "<group>"; };
 		D5389F451CA9216E00B2D0DA /* LQBannerScrollForeverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQBannerScrollForeverView.m; sourceTree = "<group>"; };
+		D53ED3871D2F83900080A9B3 /* LQLayoutConstraintVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQLayoutConstraintVCL.h; sourceTree = "<group>"; };
+		D53ED3881D2F83900080A9B3 /* LQLayoutConstraintVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQLayoutConstraintVCL.m; sourceTree = "<group>"; };
 		D54BBEF61CA394AD0050308D /* LQCellAdjustTCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCellAdjustTCL.h; sourceTree = "<group>"; };
 		D54BBEF71CA394AD0050308D /* LQCellAdjustTCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCellAdjustTCL.m; sourceTree = "<group>"; };
 		D54BBEF91CA394C80050308D /* LQCellAdjustTCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQCellAdjustTCL.storyboard; sourceTree = "<group>"; };
@@ -229,6 +232,31 @@
 				D5389F451CA9216E00B2D0DA /* LQBannerScrollForeverView.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		D53ED3841D2F4C5D0080A9B3 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D53ED3851D2F4C5D0080A9B3 /* MasonryLayout */,
+				D53ED3861D2F4C5D0080A9B3 /* NSLayoutConstraint */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		D53ED3851D2F4C5D0080A9B3 /* MasonryLayout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MasonryLayout;
+			sourceTree = "<group>";
+		};
+		D53ED3861D2F4C5D0080A9B3 /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				D53ED3871D2F83900080A9B3 /* LQLayoutConstraintVCL.h */,
+				D53ED3881D2F83900080A9B3 /* LQLayoutConstraintVCL.m */,
+			);
+			path = NSLayoutConstraint;
 			sourceTree = "<group>";
 		};
 		D54BBEF51CA394870050308D /* TestAdjust */ = {
@@ -428,6 +456,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D53ED3841D2F4C5D0080A9B3 /* AutoLayout */,
 				D57C3FAD1CBF850B006325AA /* WebViewJavascriptBridge */,
 				D54BBEFF1CA3D6530050308D /* BannerScrollForever */,
 				D54BBEF51CA394870050308D /* TestAdjust */,
@@ -681,6 +710,7 @@
 				D508500A1C8D7D0000B1D4ED /* LQSecondTCL.m in Sources */,
 				D5FBD4751C7DA3E100082772 /* LQTitleCell.m in Sources */,
 				D58B9F301C802D3A006C1A8B /* LQCodingVCL.m in Sources */,
+				D53ED3891D2F83900080A9B3 /* LQLayoutConstraintVCL.m in Sources */,
 				D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */,
 				D58B9F2F1C802D3A006C1A8B /* Person.m in Sources */,
 				D5FBD4771C7DA3E100082772 /* JsonChange.m in Sources */,
@@ -817,10 +847,11 @@
 			baseConfigurationReference = 936ADEAD89BE0628D57A67F2 /* Pods-Study.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
+				PRODUCT_BUNDLE_IDENTIFIER = cccccc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -830,10 +861,11 @@
 			baseConfigurationReference = 620E81A59BC47D14357C248F /* Pods-Study.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
+				PRODUCT_BUNDLE_IDENTIFIER = cccccc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
