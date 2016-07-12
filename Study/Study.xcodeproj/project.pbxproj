@@ -46,6 +46,7 @@
 		D58B9F2F1C802D3A006C1A8B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F261C802D3A006C1A8B /* Person.m */; };
 		D58B9F301C802D3A006C1A8B /* LQCodingVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D58B9F291C802D3A006C1A8B /* LQCodingVCL.m */; };
 		D58B9F311C802D3A006C1A8B /* LQCodingVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58B9F2A1C802D3A006C1A8B /* LQCodingVCL.storyboard */; };
+		D5B787DD1D3489C6000F3194 /* LQMasonryVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B787DC1D3489C6000F3194 /* LQMasonryVCL.m */; };
 		D5F56C0C1C8587D300C9B5AA /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F56C0B1C8587D300C9B5AA /* NSString+Addition.m */; };
 		D5FBD3C91C7DA30D00082772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FBD3C81C7DA30D00082772 /* main.m */; };
 		D5FBD3CC1C7DA30D00082772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FBD3CB1C7DA30D00082772 /* AppDelegate.m */; };
@@ -137,6 +138,8 @@
 		D58B9F281C802D3A006C1A8B /* LQCodingVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCodingVCL.h; sourceTree = "<group>"; };
 		D58B9F291C802D3A006C1A8B /* LQCodingVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCodingVCL.m; sourceTree = "<group>"; };
 		D58B9F2A1C802D3A006C1A8B /* LQCodingVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQCodingVCL.storyboard; sourceTree = "<group>"; };
+		D5B787DB1D3489C6000F3194 /* LQMasonryVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQMasonryVCL.h; sourceTree = "<group>"; };
+		D5B787DC1D3489C6000F3194 /* LQMasonryVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQMasonryVCL.m; sourceTree = "<group>"; };
 		D5F56C0A1C8587D300C9B5AA /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
 		D5F56C0B1C8587D300C9B5AA /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
 		D5FBD3C41C7DA30D00082772 /* Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +249,8 @@
 		D53ED3851D2F4C5D0080A9B3 /* MasonryLayout */ = {
 			isa = PBXGroup;
 			children = (
+				D5B787DB1D3489C6000F3194 /* LQMasonryVCL.h */,
+				D5B787DC1D3489C6000F3194 /* LQMasonryVCL.m */,
 			);
 			path = MasonryLayout;
 			sourceTree = "<group>";
@@ -710,6 +715,7 @@
 				D508500A1C8D7D0000B1D4ED /* LQSecondTCL.m in Sources */,
 				D5FBD4751C7DA3E100082772 /* LQTitleCell.m in Sources */,
 				D58B9F301C802D3A006C1A8B /* LQCodingVCL.m in Sources */,
+				D5B787DD1D3489C6000F3194 /* LQMasonryVCL.m in Sources */,
 				D53ED3891D2F83900080A9B3 /* LQLayoutConstraintVCL.m in Sources */,
 				D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */,
 				D58B9F2F1C802D3A006C1A8B /* Person.m in Sources */,

@@ -19,6 +19,7 @@
 #import "LQBannerScrollForeverVCL.h"
 #import "LQWebViewJavascriptBridgeVCL.h"
 #import "LQLayoutConstraintVCL.h"
+#import "LQMasonryVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -42,7 +43,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"LQLayoutConstraint", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"LQLayoutConstraint",@"LQMasonry", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -114,6 +115,9 @@
     } else if (indexPath.row == 10) {
         LQLayoutConstraintVCL *layout = [[LQLayoutConstraintVCL alloc] init];
         [self.navigationController pushViewController:layout animated:YES];
+    } else if (indexPath.row == 11) {
+        LQMasonryVCL *masonry = [[LQMasonryVCL alloc] init];
+        [self.navigationController pushViewController:masonry animated:YES];
     }
 }
 

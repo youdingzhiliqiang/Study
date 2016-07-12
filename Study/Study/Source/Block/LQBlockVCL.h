@@ -11,4 +11,6 @@
 @interface LQBlockVCL : LQBaseVCL
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
+@property (nonatomic,assign) int intoBlockNum;
+
 @end

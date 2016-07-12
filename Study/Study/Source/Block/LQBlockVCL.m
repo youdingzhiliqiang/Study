@@ -51,8 +51,12 @@
 #pragma mark - 下一步按钮的点击事件
 - (IBAction)nextButtonClick:(id)sender {
     LQNextBlockVCL *nextBlock = [self.storyboard instantiateViewControllerWithIdentifier:@"LQNextBlockVCL"];
+    
+    __block int num = self.intoBlockNum;
     nextBlock.sendStr = ^(NSString *textField) {
-        [self changeLabelText:textField];
+        self.intoBlockNum ++;
+        num = num + 1;
+        [self changeLabelText:[NSString stringWithFormat:@"into block num:%d,text:%@",self.intoBlockNum,textField]];
     };
     [self.navigationController pushViewController:nextBlock animated:YES];
 }

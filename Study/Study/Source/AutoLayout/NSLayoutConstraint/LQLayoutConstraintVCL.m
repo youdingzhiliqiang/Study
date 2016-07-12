@@ -22,7 +22,6 @@
     //纯代码为view新增nslayoutconstraint约束
     [self createTestView];
     
-    //利用masonry为视图添加约束
 }
 
 - (void)didReceiveMemoryWarning {
