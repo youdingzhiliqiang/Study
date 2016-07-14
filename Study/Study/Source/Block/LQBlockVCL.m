@@ -50,15 +50,16 @@
 
 #pragma mark - 下一步按钮的点击事件
 - (IBAction)nextButtonClick:(id)sender {
-    LQNextBlockVCL *nextBlock = [self.storyboard instantiateViewControllerWithIdentifier:@"LQNextBlockVCL"];
+    self.nextBlock = [self.storyboard instantiateViewControllerWithIdentifier:@"LQNextBlockVCL"];
     
+    __weak typeof(self) weakSelf = self;
     __block int num = self.intoBlockNum;
-    nextBlock.sendStr = ^(NSString *textField) {
-        self.intoBlockNum ++;
+    self.nextBlock.sendStr = ^(NSString *textField) {
+        weakSelf.intoBlockNum ++;
         num = num + 1;
-        [self changeLabelText:[NSString stringWithFormat:@"into block num:%d,text:%@",self.intoBlockNum,textField]];
+        [weakSelf changeLabelText:[NSString stringWithFormat:@"into block num:%d,text:%@",weakSelf.intoBlockNum,textField]];
     };
-    [self.navigationController pushViewController:nextBlock animated:YES];
+    [self.navigationController pushViewController:self.nextBlock animated:YES];
 }
 
 #pragma mark- 改变label的文字

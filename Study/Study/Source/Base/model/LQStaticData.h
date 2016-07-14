@@ -10,4 +10,5 @@
 
 @interface LQStaticData : NSObject<NSCoding>
 @property (nonatomic,strong) NSString *textfieldShow;
+@property (nonatomic,strong) NSString *isFirstLaunch;
 @end

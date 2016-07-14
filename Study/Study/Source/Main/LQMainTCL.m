@@ -20,6 +20,7 @@
 #import "LQWebViewJavascriptBridgeVCL.h"
 #import "LQLayoutConstraintVCL.h"
 #import "LQMasonryVCL.h"
+#import "LQLaunchView.h"
 @interface LQMainTCL ()
 
 @end
@@ -31,12 +32,31 @@
     // Do any additional setup after loading the view.
     [self addDataSource];
     LQDataModelSingle *dm = [LQDataModelSingle sharedInstance];
-    [dm archive];
+    
+    //如果程序是第一次安装，显示引导页
+    if ([dm.staticData.isFirstLaunch length] == 0) {
+        [self openLaunchView];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 打开引导页
+
+- (void)openLaunchView
+{
+    LQLaunchView *launchView = [LQLaunchView sharedInstance];
+    [launchView show];
+//    __weak typeof(self) weakSelf = self;
+    launchView.launchViewCloseBlock = ^{
+        LQDataModelSingle *dm = [LQDataModelSingle sharedInstance];
+        dm.staticData.isFirstLaunch = @"NO";
+        [dm archive];
+    };
 }
 
 #pragma mark - 数据源
