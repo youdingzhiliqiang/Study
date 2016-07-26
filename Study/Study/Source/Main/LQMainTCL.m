@@ -18,6 +18,7 @@
 #import "LQCellAdjustTCL.h"
 #import "LQBannerScrollForeverVCL.h"
 #import "LQWebViewJavascriptBridgeVCL.h"
+#import "LQPostImage.h"
 @interface LQMainTCL ()
 
 @end
@@ -41,7 +42,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"postImage", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -110,6 +111,9 @@
     } else if (indexPath.row == 9) {
         LQWebViewJavascriptBridgeVCL *webView = [[LQWebViewJavascriptBridgeVCL alloc] init];
         [self.navigationController pushViewController:webView animated:YES];
+    } else if (indexPath.row == 10) {
+        LQPostImage *image = [[LQPostImage alloc] init];
+        [self.navigationController pushViewController:image animated:YES];
     }
 }
 
