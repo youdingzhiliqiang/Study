@@ -19,6 +19,7 @@
 #import "LQBannerScrollForeverVCL.h"
 #import "LQWebViewJavascriptBridgeVCL.h"
 #import "LQPostImage.h"
+#import "LQHttpSessionManager.h"
 @interface LQMainTCL ()
 
 @end
@@ -31,6 +32,7 @@
     [self addDataSource];
     LQDataModelSingle *dm = [LQDataModelSingle sharedInstance];
     [dm archive];
+    [self createUpdtaConnecttion];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,6 +118,24 @@
         [self.navigationController pushViewController:image animated:YES];
     }
 }
+
+#pragma mark - 测试联网
+
+- (void)createUpdtaConnecttion
+{
+    LQNetworking *network = [[LQNetworking alloc] init];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"",@"version", nil];
+    [network post:@"http://appapi.udz.com/_buyerappConfig" parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+
+
 
 /*
 #pragma mark - Navigation
