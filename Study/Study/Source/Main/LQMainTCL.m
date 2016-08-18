@@ -20,6 +20,8 @@
 #import "LQWebViewJavascriptBridgeVCL.h"
 #import "LQPostImage.h"
 #import "LQHttpSessionManager.h"
+#import "LQPhotoChooseVCL.h"
+#import "LQWaterFallVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -44,7 +46,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"postImage", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -116,6 +118,13 @@
     } else if (indexPath.row == 10) {
         LQPostImage *image = [[LQPostImage alloc] init];
         [self.navigationController pushViewController:image animated:YES];
+    } else if (indexPath.row == 11) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LQPhotoChooseVCL" bundle:nil];
+        LQPhotoChooseVCL *photo = [storyboard instantiateViewControllerWithIdentifier:@"LQPhotoChooseVCL"];
+        [self.navigationController pushViewController:photo animated:YES];
+    } else if (indexPath.row == 12) {
+        LQWaterFallVCL *waterFall = [[LQWaterFallVCL alloc] init];
+        [self.navigationController pushViewController:waterFall animated:YES];
     }
 }
 
