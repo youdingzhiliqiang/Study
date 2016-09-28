@@ -21,9 +21,6 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    NSLog(@"3.0.0分支测试");
-    
     NSLog(@"===%@",NSHomeDirectory());
     [self main];
     [self.window makeKeyAndVisible];
