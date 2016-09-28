@@ -118,6 +118,7 @@
     
 }
 
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
@@ -142,7 +143,10 @@
     
 }
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"+++%d",indexPath.row);
+}
 
 /*
 #pragma mark - Navigation

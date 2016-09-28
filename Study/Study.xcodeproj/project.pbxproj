@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B969E04B921A3894927D3E40 /* libPods-Study.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1328AF94317C7980E0A730BE /* libPods-Study.a */; };
+		D505E2FA1D9BA69C00973160 /* LQRuntimeVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D505E2F91D9BA69C00973160 /* LQRuntimeVCL.m */; };
+		D505E3061D9BA89E00973160 /* LQTestPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D505E3051D9BA89E00973160 /* LQTestPerson.m */; };
 		D50850021C8D7B9E00B1D4ED /* LQTablePageVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D50850011C8D7B9E00B1D4ED /* LQTablePageVCL.m */; };
 		D50850041C8D7BAB00B1D4ED /* LQTablePageVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50850031C8D7BAB00B1D4ED /* LQTablePageVCL.storyboard */; };
 		D50850071C8D7CF200B1D4ED /* LQFirstTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D50850061C8D7CF200B1D4ED /* LQFirstTCL.m */; };
@@ -98,6 +100,10 @@
 		1328AF94317C7980E0A730BE /* libPods-Study.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Study.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		620E81A59BC47D14357C248F /* Pods-Study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study/Pods-Study.release.xcconfig"; sourceTree = "<group>"; };
 		936ADEAD89BE0628D57A67F2 /* Pods-Study.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study/Pods-Study.debug.xcconfig"; sourceTree = "<group>"; };
+		D505E2F81D9BA69C00973160 /* LQRuntimeVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRuntimeVCL.h; sourceTree = "<group>"; };
+		D505E2F91D9BA69C00973160 /* LQRuntimeVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRuntimeVCL.m; sourceTree = "<group>"; };
+		D505E3041D9BA89E00973160 /* LQTestPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQTestPerson.h; sourceTree = "<group>"; };
+		D505E3051D9BA89E00973160 /* LQTestPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQTestPerson.m; sourceTree = "<group>"; };
 		D50850001C8D7B9E00B1D4ED /* LQTablePageVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQTablePageVCL.h; sourceTree = "<group>"; };
 		D50850011C8D7B9E00B1D4ED /* LQTablePageVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQTablePageVCL.m; sourceTree = "<group>"; };
 		D50850031C8D7BAB00B1D4ED /* LQTablePageVCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQTablePageVCL.storyboard; sourceTree = "<group>"; };
@@ -264,6 +270,17 @@
 				620E81A59BC47D14357C248F /* Pods-Study.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D505E2F71D9BA67500973160 /* Objc-Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D505E2F81D9BA69C00973160 /* LQRuntimeVCL.h */,
+				D505E2F91D9BA69C00973160 /* LQRuntimeVCL.m */,
+				D505E3041D9BA89E00973160 /* LQTestPerson.h */,
+				D505E3051D9BA89E00973160 /* LQTestPerson.m */,
+			);
+			path = "Objc-Runtime";
 			sourceTree = "<group>";
 		};
 		D5084FFF1C8D7B8700B1D4ED /* TabelPage */ = {
@@ -561,6 +578,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D505E2F71D9BA67500973160 /* Objc-Runtime */,
 				D51ED4801D6552BE00B81383 /* Waterfall */,
 				D547D1A21D644DC600AA7292 /* MorePhotoChoose */,
 				D57C3FAD1CBF850B006325AA /* WebViewJavascriptBridge */,
@@ -717,6 +735,7 @@
 				TargetAttributes = {
 					D5FBD3C31C7DA30D00082772 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -834,6 +853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50850021C8D7B9E00B1D4ED /* LQTablePageVCL.m in Sources */,
+				D505E3061D9BA89E00973160 /* LQTestPerson.m in Sources */,
 				D563DA301C882B8200A1E205 /* LQGcdVCL.m in Sources */,
 				D54BBF021CA3D7350050308D /* LQBannerScrollForeverVCL.m in Sources */,
 				D5FBD3CC1C7DA30D00082772 /* AppDelegate.m in Sources */,
@@ -876,6 +896,7 @@
 				D51ED4921D658C4800B81383 /* LQImageTitleCell.m in Sources */,
 				D547D1B11D644FD300AA7292 /* LQPhotoCell.m in Sources */,
 				D572C0EC1C8EA29F00A5B917 /* MJDIYHeader.m in Sources */,
+				D505E2FA1D9BA69C00973160 /* LQRuntimeVCL.m in Sources */,
 				D5FBD4761C7DA3E100082772 /* FileManage.m in Sources */,
 				D5FBD47B1C7DA3E100082772 /* LQDataModelSingle.m in Sources */,
 				D547D1A51D644E1100AA7292 /* LQPhotoChooseVCL.m in Sources */,
@@ -994,6 +1015,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Study/Source/WebViewJavascriptBridge/OCBridgeSwift/Study-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1009,6 +1031,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Study/Source/WebViewJavascriptBridge/OCBridgeSwift/Study-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

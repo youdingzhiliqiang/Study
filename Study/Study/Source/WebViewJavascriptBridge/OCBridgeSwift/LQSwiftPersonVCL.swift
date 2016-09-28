@@ -10,8 +10,8 @@ import UIKit
 
 class LQSwiftPersonVCL: LQBaseVCL,UITableViewDelegate,UITableViewDataSource {
 
-    let screen_height = UIScreen.mainScreen().bounds.size.height
-    let screen_width = UIScreen.mainScreen().bounds.size.width
+    let screen_height = UIScreen.main.bounds.size.height
+    let screen_width = UIScreen.main.bounds.size.width
     var personArray:NSMutableArray?
     
     var tableView:UITableView?
@@ -33,45 +33,45 @@ class LQSwiftPersonVCL: LQBaseVCL,UITableViewDelegate,UITableViewDataSource {
     func setPersonArray() {
         personArray = NSMutableArray()
         for index in 0...10 {
-            personArray?.addObject("Person\(index)")
+            personArray?.add("Person\(index)")
         }
     }
     
     func createTableView() {
         
-        tableView = UITableView(frame: CGRectMake(0, 64,screen_width ,screen_height), style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRect(x: 0, y: 64,width: screen_width ,height: screen_height), style: UITableViewStyle.grouped)
         tableView?.delegate = self
         tableView?.dataSource = self
         self.view.addSubview(tableView!)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (personArray?.count)!
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.01
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier)
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: identifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: identifier)
         }
-        cell?.textLabel?.text = personArray![indexPath.row] as? String
+        cell?.textLabel?.text = personArray![(indexPath as NSIndexPath).row] as? String
         return cell!
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        var personDetail:LQPersonDetailVCL = LQPersonDetailVCL()
 //        
 //        personArray![indexPath.row] as? String

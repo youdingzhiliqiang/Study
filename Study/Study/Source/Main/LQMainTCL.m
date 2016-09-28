@@ -22,6 +22,7 @@
 #import "LQHttpSessionManager.h"
 #import "LQPhotoChooseVCL.h"
 #import "LQWaterFallVCL.h"
+#import "LQRuntimeVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -46,7 +47,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -125,6 +126,9 @@
     } else if (indexPath.row == 12) {
         LQWaterFallVCL *waterFall = [[LQWaterFallVCL alloc] init];
         [self.navigationController pushViewController:waterFall animated:YES];
+    } else if (indexPath.row == 13) {
+        LQRuntimeVCL *runTime = [[LQRuntimeVCL alloc] init];
+        [self.navigationController pushViewController:runTime animated:YES];
     }
 }
 
