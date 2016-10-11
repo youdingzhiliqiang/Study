@@ -14,7 +14,7 @@
     NSString *bark;
 }
 @property (nonatomic,assign) BOOL isMan;
-
+@property (nonatomic,copy) NSString *testStr;
 @end
 
 @implementation LQTestPerson

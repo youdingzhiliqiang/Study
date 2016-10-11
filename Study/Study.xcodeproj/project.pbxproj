@@ -71,6 +71,7 @@
 		D58B9F311C802D3A006C1A8B /* LQCodingVCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58B9F2A1C802D3A006C1A8B /* LQCodingVCL.storyboard */; };
 		D592A7661D45F6DE0094BF76 /* LQPostImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D592A7651D45F6DE0094BF76 /* LQPostImage.m */; };
 		D5A1F05F1D5AD6C50031C74B /* LQHttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A1F05E1D5AD6C50031C74B /* LQHttpSessionManager.m */; };
+		D5C227CF1DAC874A00CEC54D /* LQImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C227CE1DAC874A00CEC54D /* LQImageFromColor.m */; };
 		D5C2F9E71D4746DB00A9F828 /* LQSwiftPersonVCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2F9E61D4746DB00A9F828 /* LQSwiftPersonVCL.swift */; };
 		D5C2F9EE1D4776D700A9F828 /* LQPersonDetailVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C2F9ED1D4776D700A9F828 /* LQPersonDetailVCL.m */; };
 		D5F56C0C1C8587D300C9B5AA /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F56C0B1C8587D300C9B5AA /* NSString+Addition.m */; };
@@ -94,6 +95,7 @@
 		D5FBD47C1C7DA3E100082772 /* LQStaticData.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FBD4601C7DA3E100082772 /* LQStaticData.m */; };
 		D5FBD4801C7DA3E100082772 /* LQMainTCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FBD46A1C7DA3E100082772 /* LQMainTCL.m */; };
 		D5FBD4811C7DA3E100082772 /* LQMainTCL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FBD46B1C7DA3E100082772 /* LQMainTCL.storyboard */; };
+		D5FF34E21DAB356500864F33 /* LQVideoPlayVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FF34E11DAB356500864F33 /* LQVideoPlayVCL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +200,8 @@
 		D592A7651D45F6DE0094BF76 /* LQPostImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQPostImage.m; sourceTree = "<group>"; };
 		D5A1F05D1D5AD6C50031C74B /* LQHttpSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQHttpSessionManager.h; sourceTree = "<group>"; };
 		D5A1F05E1D5AD6C50031C74B /* LQHttpSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQHttpSessionManager.m; sourceTree = "<group>"; };
+		D5C227CD1DAC874A00CEC54D /* LQImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQImageFromColor.h; sourceTree = "<group>"; };
+		D5C227CE1DAC874A00CEC54D /* LQImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQImageFromColor.m; sourceTree = "<group>"; };
 		D5C2F9E51D4746DB00A9F828 /* Study-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Study-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5C2F9E61D4746DB00A9F828 /* LQSwiftPersonVCL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQSwiftPersonVCL.swift; sourceTree = "<group>"; };
 		D5C2F9EC1D4776D700A9F828 /* LQPersonDetailVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQPersonDetailVCL.h; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 		D5FBD4691C7DA3E100082772 /* LQMainTCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQMainTCL.h; sourceTree = "<group>"; };
 		D5FBD46A1C7DA3E100082772 /* LQMainTCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQMainTCL.m; sourceTree = "<group>"; };
 		D5FBD46B1C7DA3E100082772 /* LQMainTCL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LQMainTCL.storyboard; sourceTree = "<group>"; };
+		D5FF34E01DAB356500864F33 /* LQVideoPlayVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQVideoPlayVCL.h; sourceTree = "<group>"; };
+		D5FF34E11DAB356500864F33 /* LQVideoPlayVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQVideoPlayVCL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +584,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D5FF34DF1DAB353E00864F33 /* VideoPlay */,
 				D505E2F71D9BA67500973160 /* Objc-Runtime */,
 				D51ED4801D6552BE00B81383 /* Waterfall */,
 				D547D1A21D644DC600AA7292 /* MorePhotoChoose */,
@@ -649,6 +656,8 @@
 				D5A1F05E1D5AD6C50031C74B /* LQHttpSessionManager.m */,
 				D5F8CCF91D59CC54008E34A4 /* LQNetworking.h */,
 				D5F8CCFA1D59CC54008E34A4 /* LQNetworking.m */,
+				D5C227CD1DAC874A00CEC54D /* LQImageFromColor.h */,
+				D5C227CE1DAC874A00CEC54D /* LQImageFromColor.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -698,6 +707,15 @@
 			children = (
 			);
 			path = Third;
+			sourceTree = "<group>";
+		};
+		D5FF34DF1DAB353E00864F33 /* VideoPlay */ = {
+			isa = PBXGroup;
+			children = (
+				D5FF34E01DAB356500864F33 /* LQVideoPlayVCL.h */,
+				D5FF34E11DAB356500864F33 /* LQVideoPlayVCL.m */,
+			);
+			path = VideoPlay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -868,6 +886,7 @@
 				D50850101C8D7D1E00B1D4ED /* LQFourthTCL.m in Sources */,
 				D5FBD47C1C7DA3E100082772 /* LQStaticData.m in Sources */,
 				D5FBD4731C7DA3E100082772 /* LQTransformVCL.m in Sources */,
+				D5C227CF1DAC874A00CEC54D /* LQImageFromColor.m in Sources */,
 				D563DA221C88172A00A1E205 /* LQClearCacheVCL.m in Sources */,
 				D5FBD47A1C7DA3E100082772 /* LQBaseVCL.m in Sources */,
 				D5C2F9EE1D4776D700A9F828 /* LQPersonDetailVCL.m in Sources */,
@@ -894,6 +913,7 @@
 				D5F56C0C1C8587D300C9B5AA /* NSString+Addition.m in Sources */,
 				D5FBD4801C7DA3E100082772 /* LQMainTCL.m in Sources */,
 				D51ED4921D658C4800B81383 /* LQImageTitleCell.m in Sources */,
+				D5FF34E21DAB356500864F33 /* LQVideoPlayVCL.m in Sources */,
 				D547D1B11D644FD300AA7292 /* LQPhotoCell.m in Sources */,
 				D572C0EC1C8EA29F00A5B917 /* MJDIYHeader.m in Sources */,
 				D505E2FA1D9BA69C00973160 /* LQRuntimeVCL.m in Sources */,

@@ -23,6 +23,7 @@
 #import "LQPhotoChooseVCL.h"
 #import "LQWaterFallVCL.h"
 #import "LQRuntimeVCL.h"
+#import "LQVideoPlayVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -47,7 +48,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime",@"VideoPlayVCL", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -129,6 +130,9 @@
     } else if (indexPath.row == 13) {
         LQRuntimeVCL *runTime = [[LQRuntimeVCL alloc] init];
         [self.navigationController pushViewController:runTime animated:YES];
+    } else if (indexPath.row == 14) {
+        LQVideoPlayVCL *videoPlay = [[LQVideoPlayVCL alloc] init];
+        [self.navigationController pushViewController:videoPlay animated:YES];
     }
 }
 

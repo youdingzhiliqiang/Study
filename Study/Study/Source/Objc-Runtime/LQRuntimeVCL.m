@@ -12,6 +12,8 @@
 
 @interface LQRuntimeVCL ()
 
+@property (nonatomic,assign) SEL helloWorld;
+
 @end
 
 @implementation LQRuntimeVCL
@@ -36,6 +38,9 @@
     //属性检测
     [self personPropertyTest];
     
+    //获取类的名称
+    [self obtainClassName];
+    
 }
 
 /**
@@ -46,6 +51,10 @@
     class_addMethod([LQTestPerson class], @selector(helloWorld), class_getMethodImplementation([LQRuntimeVCL class], @selector(find)), "v@");
 }
 
+/**
+ 视图即将出现
+ 
+ */
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated ];
@@ -62,16 +71,28 @@
     method_exchangeImplementations(old, new);
 }
 
+
+/**
+  viewWillAppear的替代方法
+ */
 - (void)replaceViewAppear
 {
     NSLog(@"I replace the view will appear");
 }
 
+
+/**
+ 动态给testperson添加的方法
+ */
 - (void)find
 {
     NSLog(@"Hello world");
 }
 
+
+/**
+ 属性的实检测
+ */
 - (void)personPropertyTest
 {
     Class classObject = objc_getClass("LQTestPerson");
@@ -101,6 +122,34 @@
     
 }
 
+/**
+ 获取类的名称
+ */
+- (void)obtainClassName
+{
+    //获取testperson 类名称
+    __unsafe_unretained Class class = [LQTestPerson class];
+    NSString *className = [NSString stringWithCString:class_getName(class) encoding:NSUTF8StringEncoding];
+    NSLog(@"LQTestPerson class name is :%@",className);
+    
+    //获取RUNTIME父类名称
+    NSString *superClassName = [NSString stringWithCString:class_getName(class_getSuperclass([self class])) encoding:NSUTF8StringEncoding];
+    NSLog(@"runtime super class is:%@",superClassName);
+    
+    //判断是否为metaclass
+    Class superClass = [self class];
+    BOOL isMetaClass = class_isMetaClass(superClass);
+    NSLog(@"==%d",isMetaClass);
+    Class metaClass = object_getClass(superClass);
+    isMetaClass = class_isMetaClass(metaClass);
+    NSLog(@"==%d",isMetaClass);
+    
+    //计算实例的size
+    LQTestPerson *person = [[LQTestPerson alloc] init];
+    size_t size = class_getInstanceSize([person class]);
+    NSLog(@"size is:%d",(int)size);
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
